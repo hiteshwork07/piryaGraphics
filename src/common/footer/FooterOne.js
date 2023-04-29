@@ -1,17 +1,15 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../../elements/logo/Logo";
 import footerOne from "../../data/footer/footerOne.json";
 import ScrollTop from "./ScrollTop";
-const footerIntem =  footerOne[0];
-const footerIntemOne =  footerOne[1];
-const footerIntemTwo =  footerOne[2];
-const footerIntemThree =  footerOne[3];
-const footerIntemFour =  footerOne[4];
-const footerIntemFive =  footerOne[5];
+const footerIntem = footerOne[0];
+const footerIntemOne = footerOne[1];
+const footerIntemTwo = footerOne[2];
+const footerIntemThree = footerOne[3];
+const footerIntemFive = footerOne[5];
 const indexOneLink = (footerIntemOne.quicklink);
 const indexTwoLink = (footerIntemTwo.quicklink);
-const indexThreeLink = (footerIntemThree.quicklink);
 
 const FooterOne = () => {
     return (
@@ -24,7 +22,7 @@ const FooterOne = () => {
                             <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                                 <div className="rn-footer-widget">
                                     <div className="logo">
-                                        <Logo 
+                                        <Logo
                                             image={`${process.env.PUBLIC_URL}/images/logo/logo.png`}
                                             image2={`${process.env.PUBLIC_URL}/images/logo/logo-dark.png`}
                                         />
@@ -47,19 +45,6 @@ const FooterOne = () => {
                                             </ul>
                                         </div>
                                     </div>
-                                    
-                                    <div className="widget-menu-bottom">
-                                        <h4 className="title">{footerIntemTwo.title}</h4>
-                                        <div className="inner">
-                                            <ul className="footer-link link-hover">
-                                                {indexThreeLink.map((data, index) => (
-                                                    <li key={index}><Link to={`${data.url}`}>{data.text}</Link></li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    
                                 </div>
                             </div>
                             {/* End Single Widget  */}
@@ -67,7 +52,7 @@ const FooterOne = () => {
                             {/* Start Single Widget  */}
                             <div className="col-lg-2 col-md-6 col-sm-6 col-12">
                                 <div className="rn-footer-widget">
-                                    
+
                                     <div className="widget-menu-top">
                                         <h4 className="title">{footerIntemThree.title}</h4>
                                         <div className="inner">
@@ -79,17 +64,6 @@ const FooterOne = () => {
                                         </div>
                                     </div>
 
-                                    <div className="widget-menu-bottom">
-                                        <h4 className="title">{footerIntemFour.title}</h4>
-                                        <div className="inner">
-                                            <ul className="footer-link link-hover">
-                                                {indexTwoLink.map((data, index) => (
-                                                    <li key={index}><Link to={`${data.url}`}>{data.text}</Link></li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    
                                 </div>
                             </div>
                             {/* End Single Widget  */}
