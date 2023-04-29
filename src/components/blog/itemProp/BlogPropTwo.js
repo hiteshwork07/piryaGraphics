@@ -6,7 +6,7 @@ import filters from "./Filters";
 
 
 const alldataBLog = BlogClassicData;
-const BlogPropTwo = ({ column , StyleVarProp}) => {
+const BlogPropTwo = ({ column ,blogList =[], StyleVarProp}) => {
     const [getAllItems] = useState(alldataBLog);
     const [dataVisibleCount, setDataVisibleCount] = useState(6);
     const [dataIncrement] = useState(3) ;
@@ -41,8 +41,8 @@ const BlogPropTwo = ({ column , StyleVarProp}) => {
         <>
             <div className="col-lg-12">
                 <div className="row row--15">
-                    {visibleItems.map((item) => (
-                        <div key={item.id} className={column}>
+                    {blogList.map((item) => (
+                        <div key={item._id} className={column}>
                             <BlogListTwo StyleVar={StyleVarProp} data={item} />
                         </div>
                     ))}

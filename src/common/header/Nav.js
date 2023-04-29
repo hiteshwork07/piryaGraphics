@@ -1,11 +1,35 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import api from "../../api/api";
 
 const Nav = () => {
-    return (
-        <ul className="mainmenu">
-            <li className="has-droupdown"><Link to="/">Home</Link>
-                {/* <ul className="submenu">
+  const [categoryList, setCategoryList] = useState([]);
+
+  const getCategoryApi = () => {
+    try {
+      api
+        .get("/api/category/")
+        .then((response) => {
+          setCategoryList(response.data?.application);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (err) {
+      console.log("err", err);
+    }
+  };
+
+  useEffect(() => {
+    getCategoryApi();
+  }, []);
+
+
+  return (
+    <ul className="mainmenu">
+      <li className="has-droupdown">
+        <Link to="/">Home</Link>
+        {/* <ul className="submenu">
                     <li><Link to="/business-consulting">Business Consulting</Link></li>
                     <li><Link to="/business-consulting-2">Business Consulting 02</Link></li>
                     <li><Link to="/corporate">Corporate</Link></li>
@@ -25,12 +49,15 @@ const Nav = () => {
                     <li><Link to="/startup">Startup</Link></li>
                     <li><Link to="/web-agency">Web Agency</Link></li>
                 </ul> */}
-            </li>
-            
-            <li><Link to="/about-us">About</Link></li>
+      </li>
 
-            <li className="with-megamenu"><Link to="/service">Services</Link>
-                {/* <div className="rn-megamenu">
+      <li>
+        <Link to="/about-us">About</Link>
+      </li>
+
+      <li className="with-megamenu">
+        <Link to="/service">Services</Link>
+        {/* <div className="rn-megamenu">
                     <div className="wrapper">
                         <div className="row row--0">
                             <div className="col-lg-3 single-mega-item">
@@ -79,29 +106,35 @@ const Nav = () => {
                         </div>
                     </div>
                 </div> */}
-            </li>
+      </li>
 
-            <li className="has-droupdown"><Link to="/blog-list-view">Blog</Link>
-                {/* <ul className="submenu">
+      <li className="has-droupdown">
+        <Link to="/blog-list-view">Blog</Link>
+        {/* <ul className="submenu">
                     <li><Link to="/blog-grid">Blog Grid</Link></li>
                     <li><Link to="/blog-grid-sidebar">Blog Grid Sidebar</Link></li>
                     <li><Link to="/blog-list-view">Blog List View</Link></li>
                     <li><Link to="/blog-list-sidebar">Blog List View Sidebar</Link></li>
                 </ul> */}
-            </li>
+      </li>
 
-            <li className="has-droupdown"><Link to="/gallery">Portfolio</Link>
-                {/* <ul className="submenu">
-                    <li><Link to="/portfolio">Portfolio Default</Link></li>
-                    <li><Link to="/portfolio-three-column">Portfolio Three Column</Link></li>
-                    <li><Link to="/portfolio-full-width">Portfolio Full Width</Link></li>
-                    <li><Link to="/portfolio-grid-layout">Portfolio Grid Layout</Link></li>
-                    <li><Link to="/portfolio-box-layout">Portfolio Box Layout</Link></li>
-                </ul> */}
-            </li>
-
-            <li className="has-droupdown"><Link to="/contact">Contact</Link></li>
+      <li className="has-droupdown">
+        <Link to={`/gallery?id=${categoryList[0]?._id}`}>Portfolio</Link>
+        <ul className="submenu">
+          {categoryList.map((c) => {
+            return (
+              <li key={c._id}>
+                <Link to={`/gallery?id=${c._id}`}>{c.categoryName}</Link>
+              </li>
+            );
+          })}
         </ul>
-    )
-}
+      </li>
+
+      <li className="has-droupdown">
+        <Link to="/contact">Contact</Link>
+      </li>
+    </ul>
+  );
+};
 export default Nav;
