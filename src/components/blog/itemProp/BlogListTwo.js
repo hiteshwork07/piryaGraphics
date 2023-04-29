@@ -23,7 +23,7 @@ const BlogListTwo = ({ data, StyleVar }) => {
       <div className="inner">
         <div className="thumbnail">
           <Link
-            to={process.env.REACT_APP_BASE_URL + `/blog-details/${data._id}`}
+            to={`/blog-details/${data._id}`}
             className="image"
           >
             <img
