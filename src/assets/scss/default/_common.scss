@@ -4,12 +4,12 @@
 
 /* Theme Gradient */
 .theme-gradient {
-    background: -moz-linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98% / 200% 100%;
-    background: -webkit-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98% / 200% 100%;
-    background: -webkit-linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98% / 200% 100%;
-    background: -o-linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98% / 200% 100%;
-    background: -ms-linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98% / 200% 100%;
-    background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98% / 200% 100%;
+    background: -moz-linear-gradient(69deg,#05A8A3 30%,#0F6678 60%,#FF2824 103%,#FF2824) 95%/200% 100%;
+    background: -webkit-gradient(69deg,#05A8A3 30%,#0F6678 60%,#FF2824 103%,#FF2824) 95%/200% 100%;
+    background: -webkit-linear-gradient(69deg,#05A8A3 30%,#0F6678 60%,#FF2824 103%,#FF2824) 95%/200% 100%;
+    background: -o-linear-gradient(69deg,#05A8A3 30%,#0F6678 60%,#FF2824 103%,#FF2824) 95%/200% 100%;
+    background: -ms-linear-gradient(69deg,#05A8A3 30%,#0F6678 60%,#FF2824 103%,#FF2824) 95%/200% 100%;
+    background: linear-gradient(69deg,#05A8A3 30%,#0F6678 60%,#FF2824 103%,#FF2824) 95%/200% 100%;
     text-transform: capitalize;
     -webkit-background-clip: text;
     background-clip: text;
@@ -19,7 +19,7 @@
 
 .bg-theme-gradient {
     background-color: transparent;
-    background-image: linear-gradient(90deg, var(--color-primary-lightest) 10%, var(--color-primary-alt) 50%, var(--color-tertiary-alt) 90%);
+    background-image: linear-gradient(69deg,#05A8A3 30%,#0F6678 60%,#FF2824 103%,#FF2824) 95%/200% 100%;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
