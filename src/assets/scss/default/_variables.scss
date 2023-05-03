@@ -1,15 +1,15 @@
 /*-- Variables --*/
 :root {
     //Themes colors
-    --color-primary: #059DFF;
+    --color-primary: #3a6cb5;
     --color-primary-rgba: rgb(5, 157, 255);
     --color-primary-alt: #059DFF;
     --color-primary-light: #059DFF;
     --color-primary-lightest: #059DFF;
-    --color-secondary: #FB5343;
-    --color-tertiary: #6549D5;
-    --color-tertiary-alt: #6549D5;
-    --color-pink: #E33FA1;
+    --color-secondary: #5c848c;
+    --color-tertiary: #1b7284;
+    --color-tertiary-alt: #8174b4;
+    --color-pink: #5899a7;
     --color-light-green: #36C6F0;
     --color-primary-darker: #011827;
     --color-tertiary-darker: #150b40;
@@ -94,7 +94,7 @@
 
 
     //Shadows
-    --shadow-primary: 0 0 20px 5px rgba(251,83,67, 0.20);
+    --shadow-primary: 0 0 20px 5px hsla(216, 51%, 47%, 20);
     --shadow-light: 1px 1px 6px rgba(0, 0, 0, 0.25);
     --shadow-lighter: 4px 4px 20px 20px rgba(0, 0, 0, 0.01);
 
