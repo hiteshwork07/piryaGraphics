@@ -160,6 +160,7 @@
     height: 80px;
     animation: headerSticky .95s ease forwards;
     z-index: 9;
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
 }
 
 @keyframes headerSticky {

@@ -31,13 +31,6 @@ const BlogListView = () => {
     <>
       <SEO title="Blog List View || PRIY Graphics | Printing | Advertising Services in Surat - React Business  Template" />
       <Layout>
-        <BreadcrumbOne
-          title="The Easiest Way To Create Website <br /> Quick Copy & Make site."
-          rootUrl="/"
-          parentUrl="Home"
-          currentUrl="Blog List View"
-        />
-
         <div className="main-content">
           {/* Start Blog Area  */}
           <div className="rn-blog-area rn-section-gap">

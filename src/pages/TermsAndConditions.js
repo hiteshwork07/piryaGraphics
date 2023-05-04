@@ -8,12 +8,6 @@ const TermsAndConditions = () => {
     <>
       <SEO title="Terms and Condition || Priy Graphics" />
       <Layout>
-        <BreadcrumbOne
-          title="Terms and Condition"
-          rootUrl="/"
-          parentUrl="Home"
-          currentUrl="Terms and Condition"
-        />
         <div className="main-content">
           {/* Start Contact Area  */}
           <div className="rwt-contact-area rn-section-gap">

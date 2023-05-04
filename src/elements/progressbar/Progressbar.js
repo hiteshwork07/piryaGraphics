@@ -17,7 +17,7 @@ const Progressbar = () => {
 
       <Layout>
         <BreadcrumbOne
-          title="The Easiest Way To Create Website <br /> Quick Copy & Make site."
+          title=""
           rootUrl="/"
           parentUrl="Home"
           currentUrl="Progressbar"

@@ -13,12 +13,7 @@ const Tab = () => {
     <>
       <SEO title="Tab || PRIY Graphics | Printing | Advertising Services in Surat - React Business  Template" />
       <Layout>
-        <BreadcrumbOne
-          title="The Easiest Way To Create Website <br /> Quick Copy & Make site."
-          rootUrl="/"
-          parentUrl="Home"
-          currentUrl="Tab"
-        />
+        <BreadcrumbOne title="" rootUrl="/" parentUrl="Home" currentUrl="Tab" />
         <div className="main-content">
           {/* Start Elements Area  */}
           <div className="rwt-tab-area rn-section-gap">

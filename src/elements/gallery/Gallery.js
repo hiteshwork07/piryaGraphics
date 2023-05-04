@@ -134,12 +134,6 @@ const Elements = () => {
     <>
       <SEO title="Gallery || PRIY Graphics | Printing | Advertising Services in Surat - React Business  Template" />
       <Layout>
-        <BreadcrumbOne
-          title="The Easiest Way To Create Website <br /> Quick Copy & Make site."
-          rootUrl="/"
-          parentUrl="Home"
-          currentUrl="Gallery"
-        />
         <div className="main-content">
           {/* Start Elements Area  */}
           {/* <div className="rwt-gallery-area rn-section-gap">

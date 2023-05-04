@@ -23,7 +23,7 @@ const HeaderOne = ({btnStyle, HeaderSTyle}) => {
     };
     return (
         <>
-            <header ref={ref} className={`rn-header header-default ${HeaderSTyle} ${headerClasses}`}>
+            <header ref={ref} className={`rn-header header-default sticky ${HeaderSTyle} ${headerClasses}`}>
                 <div className="container position-relative">
                     <div className="row align-items-center row--0">
                         <div className="col-lg-3 col-md-6 col-4">

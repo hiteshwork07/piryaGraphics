@@ -10,12 +10,6 @@ const Contact = () => {
         <>
             <SEO title="Contact || Priy Graphics" />
             <Layout>
-                <BreadcrumbOne 
-                    title="Contact us"
-                    rootUrl="/"
-                    parentUrl="Home"
-                    currentUrl="Contact"
-                />
                 <div className="main-content">
                     {/* Start Contact Area  */}
                     <div className="rwt-contact-area rn-section-gap">

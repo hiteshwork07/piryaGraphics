@@ -8,12 +8,6 @@ const PrivacyPolicy = () => {
     <>
       <SEO title="Privacy Policy || Priy Graphics" />
       <Layout>
-        <BreadcrumbOne
-          title="Privacy Policy"
-          rootUrl="/"
-          parentUrl="Home"
-          currentUrl="Privacy Policy"
-        />
         <div className="main-content">
           {/* Start Contact Area  */}
           <div className="rwt-contact-area rn-section-gap">

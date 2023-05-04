@@ -17,12 +17,6 @@ const Service = () => {
     <>
       <SEO title="Service || PRIY Graphics | Printing | Advertising Services in Surat - React Business  Template" />
       <Layout>
-        <BreadcrumbOne
-          title="The Easiest Way To Create Website <br /> Quick Copy & Make site."
-          rootUrl="/"
-          parentUrl="Home"
-          currentUrl="Service"
-        />
         <div className="main-content">
           {/* Start Service Area  */}
           {/* <div className="rn-service-area rn-section-gap">

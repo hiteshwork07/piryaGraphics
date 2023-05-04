@@ -1,8 +1,8 @@
 {
-  "name": "PRIY Graphics | Printing | Advertising Services in Surat",
+  "name": "PRIYGraphics",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://PRIY Graphics | Printing | Advertising Services in Surat.rainbowit.net/",
+  "homepage": "",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
