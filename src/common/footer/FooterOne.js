@@ -27,7 +27,7 @@ const FooterOne = () => {
                                             image2={`${process.env.PUBLIC_URL}/images/logo/logo-dark.png`}
                                         />
                                     </div>
-                                    <h3 className="text-big">{footerIntem.title}</h3>
+                                    <h3  style={{fontSize :"13px"}}className="text-big">{footerIntem.title}</h3>
                                 </div>
                             </div>
                             {/* End Single Widget  */}

@@ -29,7 +29,7 @@ const ContactOne = () => {
                                     </div>
                                     <div className="inner">
                                         <h4 className="title">Our Email Address</h4>
-                                        <p><a href="mailto:mailto:contact@priygraphics.com">mailto:contact@priygraphics.com</a></p>
+                                        <p><a href="mailto:mailto:contact@priygraphics.com">contact@priygraphics.com</a></p>
                                     </div>
                                 </div>
                             </div>
