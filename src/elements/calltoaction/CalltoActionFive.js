@@ -3,9 +3,9 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { FiArrowRight } from "react-icons/fi";
 
 const callToActionData = {
-    title: "Ready to start creating a standard website?",
-    subtitle: "Finest choice for your home & office",
-    btnText: "Purchase Doob",
+    title: "Ready to take your branding to the next level? Contact us today!",
+    subtitle: "Let's make your brand unforgettable",
+    btnText: "Contact Us",
 }
 
 const CalltoActionFive = () => {

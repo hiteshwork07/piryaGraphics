@@ -28,15 +28,15 @@ const AboutFour = ({image}) => {
                     <div className="col-lg-6 mt_md--40 mt_sm--40">
                         <div className="content">
                             <div className="inner">
-                                <h3 className="title">Doob specializes in <br /> small <strong>Corporate Business.</strong></h3>
+                                <h3 className="title"><strong>Our Company in Motion</strong></h3>
                                 <ul className="feature-list">
                                     <li>
                                         <div className="icon">
                                             <FiCheck />
                                         </div>
                                         <div className="title-wrapper">
-                                            <h4 className="title">A good traveler has no fixed plans</h4>
-                                            <p className="text">Lorem ipsum dolor consectetur adipiscing do eiusmod tempor incididunt labore.</p>
+                                            <h4 className="title">See Our Work in Action</h4>
+                                            <p className="text">Get an inside look at our state-of-the-art design and printing facility and see how we ensure quality in every project</p>
                                         </div>
                                     </li>
                                     <li>
@@ -44,13 +44,13 @@ const AboutFour = ({image}) => {
                                             <FiCheck />
                                         </div>
                                         <div className="title-wrapper">
-                                            <h4 className="title">A good traveler has no fixed plans</h4>
-                                            <p className="text">Lorem ipsum dolor consectetur adipiscing do eiusmod tempor incididunt labore.</p>
+                                            <h4 className="title">Hear from Our Satisfied Clients</h4>
+                                            <p className="text">Listen to testimonials from our happy clients and see how we have helped them achieve their branding and marketing goals</p>
                                         </div>
                                     </li>
                                 </ul>
                                 <div className="about-btn mt--30">
-                                    <a className="btn-default" href="#">About Our Doob</a>
+                                    <a className="btn-default" href="#">Watch Testimonial Video</a>
                                 </div>
                             </div>
                         </div>

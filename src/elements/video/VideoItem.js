@@ -28,7 +28,7 @@ function VideoItem({galleryItem}) {
         <div className="rn-gallery icon-center video-gallery-content bg_image" data-black-overlay="7" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/bg/bg-image-4.jpg)`}}>
             <div className="overlay-content">
                 <button className="btn-default rounded-player sm-size" onClick={ () => setToggler(!toggler) }><span>{iconHandel()}</span></button>
-                <h3 className="title">Watch the creative process behind <br /> the digital marketing.</h3>
+                <h3 className="title">Our Company in Motion</h3>
             </div>
             <div className="video-lightbox-wrapper">
                 <FsLightbox 

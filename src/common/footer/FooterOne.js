@@ -76,7 +76,7 @@ const FooterOne = () => {
                                         <h6 className="subtitle">{footerIntemFive.subtitle}</h6>
                                         <form className="newsletter-form" action="#">
                                             <div className="form-group">
-                                                <input type="email" placeholder="Enter Your Email Here" />
+                                                <input type="email" placeholder="Enter Your Mobile number Here" />
                                             </div>
                                             <div className="form-group">
                                                 <button className="btn-default" type="submit">Submit Now</button>

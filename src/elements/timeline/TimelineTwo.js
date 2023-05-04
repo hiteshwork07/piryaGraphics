@@ -4,23 +4,23 @@ import ScrollAnimation from "react-animate-on-scroll";
 const TimelineData = [
     {
         id: "1",
-        title: "Knowledge",
-        description: "Present all available features in Essentials.",
+        title: "Consultation",
+        description: "We begin by understanding your needs and goals, and providing expert advice and guidance.",
     },
     {
         id: "2",
-        title: "Working",
-        description: "All Feature available features in Essentials.",
+        title: "Design",
+        description: "Our team of skilled designers will work closely with you to create a design that perfectly represents your brand.",
     },
     {
         id: "3",
-        title: "Solution",
-        description: "Popular Feature available features in Essentials.",
+        title: "Printing",
+        description: "Using state-of-the-art printing technology, we bring your design to life on a variety of high-quality materials.",
     },
     {
         id: "4",
-        title: "Process",
-        description: "Latest Feature available features in Essentials.",
+        title: "Delivery",
+        description: "We carefully package and deliver your printed materials to your doorstep, on time and ready to make an impact.",
     },
 ]
 

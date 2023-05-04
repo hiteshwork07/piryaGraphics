@@ -1,21 +1,26 @@
-import React from 'react';
+import React from "react";
 import PortfolioDetailsContent from "../elements/portfolio/PortfolioDetailsContent";
 import PortfolioData from "../data/portfolio/PortfolioData.json";
 import SEO from "../common/SEO";
 import Layout from "../common/Layout";
 
-
-const PortfolioDetails = ({match: {params: {id}}}) => {
-    const portfolioId = parseInt(id, 10)
-    const data = PortfolioData.filter(portfolio => portfolio.id === portfolioId);
-    return (
-        <>
-            <SEO title="Portfolio Details || Doob" />
-            <Layout>
-                <PortfolioDetailsContent data={data[0]} />
-            </Layout>
-        </>
-    )
-}
+const PortfolioDetails = ({
+  match: {
+    params: { id },
+  },
+}) => {
+  const portfolioId = parseInt(id, 10);
+  const data = PortfolioData.filter(
+    (portfolio) => portfolio.id === portfolioId
+  );
+  return (
+    <>
+      <SEO title="Portfolio Details || PRIY Graphics | Printing | Advertising Services in Surat" />
+      <Layout>
+        <PortfolioDetailsContent data={data[0]} />
+      </Layout>
+    </>
+  );
+};
 
 export default PortfolioDetails;

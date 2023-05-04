@@ -70,6 +70,8 @@ import Error from "./pages/Error";
 
 // Import Css Here 
 import './assets/scss/style.scss';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
 
 
 const App = () => {
@@ -129,6 +131,8 @@ const App = () => {
                     <Route path={`${process.env.PUBLIC_URL + "/advance-tab"}`} exact component={AdvanceTab}/>
                     <Route path={`${process.env.PUBLIC_URL + "/advance-pricing"}`} exact component={AdvancePricing}/>
                     <Route path={`${process.env.PUBLIC_URL + "/about-us"}`} exact component={AboutUs}/>
+                    <Route path={`${process.env.PUBLIC_URL + "/privacy-policy"}`} exact component={PrivacyPolicy}/>
+                    <Route path={`${process.env.PUBLIC_URL + "/terms-and-conditions"}`} exact component={TermsAndConditions}/>
 
                     <Route path={`${process.env.PUBLIC_URL + "/error"}`} exact component={Error}/>
                     

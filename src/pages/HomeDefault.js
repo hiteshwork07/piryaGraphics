@@ -88,6 +88,7 @@ const HomeDefault = () => {
             <ServiceOne
               serviceStyle="service__style--1 icon-circle-style"
               textAlign="text-center"
+              isHomePage
             />
           </div>
         </div>
@@ -102,9 +103,9 @@ const HomeDefault = () => {
                 <SectionTitle
                   textAlign="text-center"
                   radiusRounded=""
-                  subtitle="Business Projects"
-                  title="Business Case Studies.!"
-                  description="We provide company and finance service for <br /> startups and company business."
+                  subtitle="Our Portfolio"
+                  title="Our Design Showcase"
+                  description="Explore our portfolio of innovative and effective design solutions that have helped our clients succeed."
                 />
               </div>
             </div>
@@ -115,7 +116,7 @@ const HomeDefault = () => {
 
         <Separator />
         {/* Start Timeline Area  */}
-        <div className="rwt-timeline-area rn-section-gap">
+        {/* <div className="rwt-timeline-area rn-section-gap">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -134,7 +135,7 @@ const HomeDefault = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* End Timeline Area  */}
 
         {/* Start Video Area  */}
@@ -167,7 +168,7 @@ const HomeDefault = () => {
               </div>
             </div>
             <TestimonialOne
-              column="col-lg-4 col-md-6 col-12"
+              column="col-lg-3 col-md-6 col-12"
               teamStyle="card-style-default testimonial-style-one style-two border-gradient"
             />
           </div>
@@ -182,9 +183,9 @@ const HomeDefault = () => {
                 <SectionTitle
                   textAlign="text-center"
                   radiusRounded=""
-                  subtitle="Latests News"
-                  title="Our Latest News."
-                  description="We provide company and finance service for <br /> startups and company business."
+                  subtitle="Latests Blog"
+                  title="Insights and Inspiration"
+                  description="Discover the latest trends, tips, and tricks in graphics, printing, and advertising."
                 />
               </div>
             </div>

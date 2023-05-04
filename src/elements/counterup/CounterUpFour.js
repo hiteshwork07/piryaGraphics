@@ -4,20 +4,21 @@ import TrackVisibility from "react-on-screen";
 
 const Data = [
     {
-        countNum : 199,
+        countNum : 500,
         countTitle: 'Happy Clients.',
     },
     {
-        countNum : 575,
-        countTitle: 'Employees',
+        countNum : 20,
+        countTitle: 'Team Member',
     },
     {
-        countNum : 69,
-        countTitle: 'Useful Programs',
+        countNum : 80,
+        countTitle: 'Repeat Clients',
+        isPercentage : true
     },
     {
-        countNum : 500,
-        countTitle: 'Useful Programs',
+        countNum : 10,
+        countTitle: 'Years Experience',
     },
 ];
 const CounterUpFour = ({textALign, counterStyle, column}) => {
@@ -28,7 +29,7 @@ const CounterUpFour = ({textALign, counterStyle, column}) => {
                     <div className={`count-box ${counterStyle} ${textALign}`}>
                         <TrackVisibility once>
                             {({ isVisible }) => isVisible && 
-                                <div className="count-number">{isVisible ? <CountUp end={data.countNum} /> : 0}</div>}
+                                <div className={`count-number ${data.isPercentage && "count-percentage"}`}>{isVisible ? <CountUp end={data.countNum} /> : 0}</div>}
                         </TrackVisibility>
                         <h5 className="counter-title">{data.countTitle}</h5>
                     </div>

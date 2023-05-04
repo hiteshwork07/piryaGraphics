@@ -31,7 +31,7 @@ const AboutUs = () => {
                                     <div>
                                         <h3 className="rn-sub-badge"><span className="theme-gradient">Our Company's About Details.</span></h3>
                                     </div>
-                                    <h1 className="title display-one">We are a Corporate <br /> Business Agency.</h1>
+                                    <h1 className="title display-one">We are a Corporate <br /> Design and Printing Agency.</h1>
                                 </div>
                             </div>
                         </div>
@@ -46,11 +46,11 @@ const AboutUs = () => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="content">
-                                    <h3 className="title">We are creative digital agency working for our company brands.</h3>
+                                    <h3 className="title">We are a corporate design and printing agency working for our clients brand</h3>
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <p className="mb--10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quis. Ullam accusantium dignissimos repellendus nemo fugiat numquam, nisi odio adipisci. Veniam neque itaque expedita officiis rem ipsa! Ratione, rem reiciendis?</p>
+                                <p className="mb--10">Welcome to PRIY - your one-stop solution for all your graphics, printing, and advertising needs in Surat! For the past 10+ years, we have been serving the local community with our exceptional services and expertise. At PRIY, we are committed to providing you with more than just printed signatures. We strive to offer you the best possible experience through our comprehensive range of services and client benefits.</p>
                             </div>
                         </div>
                     </div>
@@ -84,13 +84,14 @@ const AboutUs = () => {
                                     radiusRounded = ""
                                     subtitle = "What we can do for you"
                                     title = "Services provide for you."
-                                    description = "There are many variations of passages of Lorem Ipsum available, <br /> but the majority have suffered alteration."
+                                    description = "We offer a wide range of corporate design, printing, and advertising services to help your business stand out."
                                     />
                             </div>
                         </div>
                         <ServiceOne 
                             serviceStyle = "service__style--1 bg-color-blackest radius mt--25"
                             textAlign = "text-center"
+                            isHomePage={false}
                             />
                     </div>
                 </div>

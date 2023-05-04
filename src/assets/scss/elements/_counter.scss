@@ -135,3 +135,6 @@
 }
 
 
+.count-percentage::after{
+    content: "%" !important;
+}

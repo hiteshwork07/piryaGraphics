@@ -8,10 +8,10 @@ import ContactOne from "./ContactOne";
 const Contact = () => {
     return (
         <>
-            <SEO title="Contact || Doob - React Business  Template" />
+            <SEO title="Contact || Priy Graphics" />
             <Layout>
                 <BreadcrumbOne 
-                    title="The Easiest Way To Create Website <br /> Quick Copy & Make site."
+                    title="Contact us"
                     rootUrl="/"
                     parentUrl="Home"
                     currentUrl="Contact"
