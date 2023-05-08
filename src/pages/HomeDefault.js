@@ -25,7 +25,7 @@ const PopupData = [
     id: "01",
     image: "./images/bg/bg-image-4.jpg",
     popupLink: [
-      "https://www.youtube.com/embed/ctsT5Y-InqE?&autoplay=1",
+      "https://www.youtube.com/embed/ctsT5Y-InqE?autoplay=1&mute=1&enablejsapi=1",
     ],
   },
 ];
