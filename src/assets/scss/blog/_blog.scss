@@ -18,7 +18,9 @@
     .thumbnail {
       a {
         img {
-          width: 100%;
+          width: 392px;
+          height: 240px;
+          object-fit: scale-down;
         }
       }
     }

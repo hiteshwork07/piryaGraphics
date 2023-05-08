@@ -207,7 +207,7 @@
             letter-spacing: 0.5px;
             display: block;
             margin-bottom: 18px;
-            color: var(--color-body);
+            color: var(--color-white);
 
             @media #{$md-layout} {
                 font-size: 16px;
@@ -244,7 +244,7 @@
             font-size: 25px;
             line-height: 1.7;
             margin-bottom: 40px;
-            color: var(--color-body);
+            color: var(--color-white);
 
             @media #{$lg-layout} {
                 padding: 0 14%;

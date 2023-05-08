@@ -33,14 +33,14 @@ function GalleryOne({ galleryItem }) {
           alt={subCategory}
         />
       </div>
-      <div className="video-icon">
+      {/* <div className="video-icon">
         <button
           className="btn-default rounded-player sm-size"
           onClick={() => setToggler(!toggler)}
         >
           <span>{iconHandel()}</span>
         </button>
-      </div>
+      </div> */}
       <FsLightbox toggler={toggler} sources={popupLink} />
     </div>
   );

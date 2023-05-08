@@ -14,13 +14,6 @@ const Testimonial = () => {
       <SEO title="Testimonial || PRIY Graphics | Printing | Advertising Services in Surat - React Business  Template" />
 
       <Layout>
-        <BreadcrumbOne
-          title=""
-          rootUrl="/"
-          parentUrl="Home"
-          currentUrl="Elements"
-        />
-
         <div className="main-content">
           {/* Start Elements Area  */}
           <div className="rwt-testimonial-area rn-section-gap">
@@ -36,94 +29,13 @@ const Testimonial = () => {
                 </div>
               </div>
               <TestimonialOne
-                column="col-lg-4 col-md-6 col-12 mt--30"
+                column="col-lg-3 col-md-6 col-12 mt--30"
                 teamStyle="card-style-default testimonial-style-one"
+                marginTop={false}
               />
             </div>
           </div>
-          {/* End Elements Area  */}
-          <Separator />
-
-          {/* Start Elements Area  */}
-          <div className="rwt-elements-area rn-section-gap">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-12">
-                  <SectionTitle
-                    textAlign="text-center"
-                    radiusRounded=""
-                    subtitle="Client Feedback"
-                    title="Testimonial."
-                  />
-                </div>
-              </div>
-              <TestimonialOne
-                column="col-lg-4 col-md-6 col-12"
-                teamStyle="card-style-default testimonial-style-one style-two"
-              />
-            </div>
-          </div>
-          {/* End Elements Area  */}
-          <Separator />
-
-          {/* Start Elements Area  */}
-          <div className="rwt-elements-area rn-section-gap">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-12">
-                  <SectionTitle
-                    textAlign="text-center"
-                    radiusRounded=""
-                    subtitle="Client Feedback"
-                    title="Testimonial."
-                  />
-                </div>
-              </div>
-              <TestimonialOne
-                column="col-lg-4 col-md-6 col-12"
-                teamStyle="card-style-default testimonial-style-one style-two border-gradient"
-              />
-            </div>
-          </div>
-          {/* End Elements Area  */}
-          <Separator />
-
-          {/* Start Elements Area  */}
-          <div className="rwt-elements-area rn-section-gap">
-            <div className="container">
-              <div className="row mb--20">
-                <div className="col-lg-12">
-                  <SectionTitle
-                    textAlign="text-center"
-                    radiusRounded=""
-                    subtitle="Client Feedback"
-                    title="Testimonial."
-                  />
-                </div>
-              </div>
-              <TestimonialTwo column="col-lg-12 mt--30" teamStyle="" />
-            </div>
-          </div>
-          {/* End Elements Area  */}
-          <Separator />
-
-          {/* Start Elements Area  */}
-          <div className="rwt-elements-area rn-section-gap">
-            <div className="container">
-              <div className="row mb--20">
-                <div className="col-lg-12">
-                  <SectionTitle
-                    textAlign="text-center"
-                    radiusRounded=""
-                    subtitle="Client Feedback"
-                    title="Testimonial."
-                  />
-                </div>
-              </div>
-              <TestimonialThree teamStyle="" />
-            </div>
-          </div>
-          {/* End Elements Area  */}
+          
         </div>
       </Layout>
     </>

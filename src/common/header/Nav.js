@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../../api/api";
 
-const Nav = () => {
+const Nav = ({setPortFolioData = () =>{}}) => {
   const [categoryList, setCategoryList] = useState([]);
 
   const getCategoryApi = () => {
@@ -11,6 +11,7 @@ const Nav = () => {
         .get("/api/category/")
         .then((response) => {
           setCategoryList(response.data?.application);
+          setPortFolioData(response.data?.application)
         })
         .catch((error) => {
           console.log(error);

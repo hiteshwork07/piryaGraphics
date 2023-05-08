@@ -74,7 +74,7 @@ const PopupData = [
 ]
 
 const alldata = PortfolioData;
-const PortfolioOne = ({ Column }) => {
+const PortfolioOne = ({ galleryData = [] }) => {
   const [getAllItems] = useState(alldata);
   const [dataVisibleCount, setDataVisibleCount] = useState(6);
   const [dataIncrement] = useState(6);
@@ -105,36 +105,36 @@ const PortfolioOne = ({ Column }) => {
   const handleLoadmore = (e) => {
     e.preventDefault();
     let tempCount = dataVisibleCount + dataIncrement;
-    if (dataVisibleCount >= getAllItems.length) {
-      setNoMorePost(true);
-    } else {
-      setDataVisibleCount(tempCount);
-      if (activeFilter === filters[0].text.toLowerCase()) {
-        setVisibleItems(getAllItems.filter((data) => data.id <= tempCount));
-      } else {
-        setVisibleItems(
-          getAllItems.filter(
-            (data) => data.category === activeFilter && data.id <= tempCount
-          )
-        );
-      }
-    }
+    setNoMorePost(true);
+    // if (dataVisibleCount >= getAllItems.length) {
+    // } else {
+    //   setDataVisibleCount(tempCount);
+    //   if (activeFilter === filters[0].text.toLowerCase()) {
+    //     setVisibleItems(getAllItems.filter((data) => data.id <= tempCount));
+    //   } else {
+    //     setVisibleItems(
+    //       getAllItems.filter(
+    //         (data) => data.category === activeFilter && data.id <= tempCount
+    //       )
+    //     );
+    //   }
+    // }
   };
-
+  const galleryArray = noMorePost ? galleryData : galleryData.slice(0, 6)
   return (
     <>
       <div className="row mt_dec--30 row--15">
-        {PopupData.map((item) => (
+        {galleryArray.map((item) => (
           <div
             className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30"
-            key={item.id}
+            key={item._id}
           >
             <GalleryOne galleryItem={item} />
           </div>
         ))}
       </div>
 
-      <div className="row row--15">
+     {galleryData.length > 6 && !noMorePost && <div className="row row--15">
         <div className="col-lg-12">
           <div className="rwt-load-more text-center mt--50">
             <button
@@ -155,7 +155,7 @@ const PortfolioOne = ({ Column }) => {
             </button>
           </div>
         </div>
-      </div>
+      </div>}
     </>
   );
 };

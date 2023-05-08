@@ -30,12 +30,12 @@ const ServiceList2 = [
     {
         icon: <FiCast />,
         title: 'Printing',
-        description: "Brochures <br/> Pamphlets <br/> Flyers <br/> Product Sticker/Label <br/> Business Card <br/> Envelopes <br/> Forms <br/> Letterheads <br/> Hospital File  <br/> Postcards <br/> Product Box <br/> Rx Pads and Paper <br/> Pocket Folders <br/> Four Color Non-Woven Bag <br/> Calenders <br/> Die Cut Printing <br/> And More! "
+        description: "<li> Brochures </li><li>  Pamphlets </li><li> Flyers </li><li> Product Sticker/Label </li><li> Business Card </li><li> Envelopes </li><li> Forms </li><li> Letterheads </li><li> Hospital File  </li><li> Postcards </li><li> Product Box </li><li> Rx Pads and Paper </li><li> Pocket Folders </li><li> Four Color Non-Woven Bag </li><li> Calenders </li><li> Die Cut Printing </li><li> And More!</li> "
     },
     {
         icon: <FiMap />,
         title: 'Advertising',
-        description: "Flex-Banners <br/> Hoardings <br/> Shop Branding <br/> Acrylic Board <br/> ACP Board <br/> Backlight Board <br/> LED Sign Board <br/> No Parking Board <br/> Bicycle/Auto Ads  <br/> Sunpack Sheet <br/> Pamphlets Distribution <br/> Standee Banner <br/> Vinyl Foam Sheet <br/> One Way Vision <br/> Retro Banner <br/> Matt Vinyl <br/> Eco Banner <br/> And More! "
+        description: "<li> Flex-Banners </li><li> Hoardings </li><li> Shop Branding </li><li> Acrylic Board </li><li> ACP Board </li><li> Backlight Board </li><li> LED Sign Board </li><li> No Parking Board </li><li> Bicycle/Auto Ads  </li><li> Sunpack Sheet </li><li> Pamphlets Distribution </li><li> Standee Banner </li><li> Vinyl Foam Sheet </li><li> One Way Vision </li><li> Retro Banner </li><li> Matt Vinyl </li><li> Eco Banner </li><li> And More!</li> "
     },
 ]
 
@@ -57,7 +57,9 @@ const ServiceOne = ({textAlign, serviceStyle, isHomePage = false}) => {
                             </div>
                             <div className="content">
                                 <h4 className="title w-600"><Link to="#service" dangerouslySetInnerHTML={{__html: val.title}}></Link></h4>
-                                <p className="description b1 color-gray mb--0" dangerouslySetInnerHTML={{__html: val.description}}></p>
+                                <div>
+                                    <ul style={{width : "fit-content", textAlign :"left", margin :"0 auto", paddingLeft:40}} className="description b1 color-gray mb--0" dangerouslySetInnerHTML={{__html: val.description}}></ul>
+                                </div>
                             </div>
                         </div>
                     </ScrollAnimation>

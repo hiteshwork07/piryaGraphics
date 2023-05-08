@@ -5,12 +5,12 @@ import FooterTwo from "./footer/FooterTwo";
 import Copyright from "./footer/Copyright";
 import FooterOne from './footer/FooterOne';
 
-const Layout = ({children}) => {
+const Layout = ({children, setPortFolioData = () =>{}}) => {
     return (
         <>
             <main className="page-wrapper">
                 {/* <HeaderTopNews /> */}
-                <HeaderOne btnStyle="btn-small round btn-icon" HeaderSTyle="header-not-transparent" />
+                <HeaderOne setPortFolioData={setPortFolioData} btnStyle="btn-small round btn-icon" HeaderSTyle="header-not-transparent" />
                 {children}
                 <FooterOne />
                 <Copyright />

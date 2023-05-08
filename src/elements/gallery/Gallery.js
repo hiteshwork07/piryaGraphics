@@ -1,116 +1,18 @@
 import React, { useEffect, useState } from "react";
 import SEO from "../../common/SEO";
 import Layout from "../../common/Layout";
-import BreadcrumbOne from "../breadcrumb/BreadcrumbOne";
 import SectionTitle from "../sectionTitle/SectionTitle";
 import GalleryOne from "./GalleryOne";
 import api from "../../api/api";
-
-const PopupData = [
-  {
-    id: "01",
-    image: "./images/portfolio/portfolio-01.jpg",
-    popupLink: [
-      "./images/portfolio/portfolio-01.jpg",
-      "https://www.youtube.com/watch?v=ctsT5Y-InqE&ab_channel=Rainbow-Themes",
-      "./images/portfolio/portfolio-03.jpg",
-      "./images/portfolio/portfolio-04.jpg",
-      "https://www.youtube.com/watch?v=ctsT5Y-InqE&ab_channel=Rainbow-Themes",
-      "./images/portfolio/portfolio-05.jpg",
-    ],
-  },
-  {
-    id: "02",
-    image: "./images/portfolio/portfolio-02.jpg",
-    popupLink: [
-      "https://www.youtube.com/watch?v=ctsT5Y-InqE&ab_channel=Rainbow-Themes",
-    ],
-  },
-  {
-    id: "03",
-    image: "./images/portfolio/portfolio-03.jpg",
-    popupLink: ["./images/portfolio/portfolio-03.jpg"],
-  },
-  {
-    id: "04",
-    image: "./images/portfolio/portfolio-04.jpg",
-    popupLink: ["./images/portfolio/portfolio-04.jpg"],
-  },
-  {
-    id: "05",
-    image: "./images/portfolio/portfolio-04.jpg",
-    popupLink: [
-      "https://www.youtube.com/watch?v=ctsT5Y-InqE&ab_channel=Rainbow-Themes",
-    ],
-  },
-  {
-    id: "06",
-    image: "./images/portfolio/portfolio-05.jpg",
-    popupLink: ["./images/portfolio/portfolio-05.jpg"],
-  },
-];
-
-const PopupData2 = [
-  {
-    id: "01",
-    image: "./images/portfolio/portfolio-01.jpg",
-    popupLink: [
-      "./images/portfolio/portfolio-01.jpg",
-      "https://www.youtube.com/watch?v=ctsT5Y-InqE&ab_channel=Rainbow-Themes",
-      "./images/portfolio/portfolio-03.jpg",
-      "./images/portfolio/portfolio-04.jpg",
-      "https://www.youtube.com/watch?v=ctsT5Y-InqE&ab_channel=Rainbow-Themes",
-      "./images/portfolio/portfolio-05.jpg",
-    ],
-  },
-  {
-    id: "02",
-    image: "./images/portfolio/portfolio-02.jpg",
-    popupLink: [
-      "https://www.youtube.com/watch?v=ctsT5Y-InqE&ab_channel=Rainbow-Themes",
-    ],
-  },
-  {
-    id: "03",
-    image: "./images/portfolio/portfolio-03.jpg",
-    popupLink: ["./images/portfolio/portfolio-03.jpg"],
-  },
-  {
-    id: "04",
-    image: "./images/portfolio/portfolio-04.jpg",
-    popupLink: ["./images/portfolio/portfolio-04.jpg"],
-  },
-  {
-    id: "05",
-    image: "./images/portfolio/portfolio-04.jpg",
-    popupLink: [
-      "https://www.youtube.com/watch?v=ctsT5Y-InqE&ab_channel=Rainbow-Themes",
-    ],
-  },
-  {
-    id: "06",
-    image: "./images/portfolio/portfolio-05.jpg",
-    popupLink: ["./images/portfolio/portfolio-05.jpg"],
-  },
-  {
-    id: "07",
-    image: "./images/portfolio/portfolio-06.jpg",
-    popupLink: ["./images/portfolio/portfolio-06.jpg"],
-  },
-  {
-    id: "08",
-    image: "./images/portfolio/portfolio-01.jpg",
-    popupLink: ["./images/portfolio/portfolio-01.jpg"],
-  },
-];
 
 const Elements = () => {
   const params = new URL(document.location).searchParams;
   const id = params.get("id");
 
   const [galleryData, setGalleryData] = useState([]);
+  const [portFolioData, setPortFolioData] = useState([]);
 
-  const getCategoryData = () => {
+  const getCategoryData = (id) => {
     if (!id) return;
     try {
       api
@@ -127,13 +29,17 @@ const Elements = () => {
   };
 
   useEffect(() => {
-    getCategoryData();
-  }, [id]);
+    if (id) {
+      getCategoryData(id);
+    } else {
+      getCategoryData(portFolioData[0]?._id)
+    }
+  }, [id, portFolioData]);
 
   return (
     <>
       <SEO title="Gallery || PRIY Graphics | Printing | Advertising Services in Surat - React Business  Template" />
-      <Layout>
+      <Layout setPortFolioData={setPortFolioData}>
         <div className="main-content">
           {/* Start Elements Area  */}
           {/* <div className="rwt-gallery-area rn-section-gap">

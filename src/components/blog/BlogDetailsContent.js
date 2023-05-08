@@ -5,6 +5,7 @@ import Comment from "./Comment";
 import { slugify } from "../../utils";
 import { Link } from "react-router-dom";
 import { FiUser, FiCalendar } from "react-icons/fi";
+import { getFormatedData } from "../../utils/helper";
 
 const BlogDetailsContent = ({ data }) => {
   console.log("data", data);
@@ -22,7 +23,7 @@ const BlogDetailsContent = ({ data }) => {
                   {/* <li><FiUser /><Link to={process.env.PUBLIC_URL + `/archive/${slugify(data.author)}`}>{data.author}</Link></li> */}
                   <li>
                     <FiCalendar />
-                    {data.updatedAt}
+                    {getFormatedData(data.updatedAt)}
                   </li>
                 </ul>
                 <div className="thumbnail alignwide mt--60">

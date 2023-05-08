@@ -5,8 +5,8 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 class GoogleMapStyle extends Component {
   static defaultProps = {
     center: {
-      lat: 59.95,
-      lng: 30.33
+      lat: 21.225487,
+      lng: 72.896577
     },
     zoom: 11
   };
@@ -18,11 +18,11 @@ class GoogleMapStyle extends Component {
         <GoogleMapReact
           // bootstrapURLKeys={{ key: /* YOUR KEY HERE */ }}
           defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+          defaultZoom={20}
         >
           <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
+            lat={21.225487}
+            lng={72.896577}
             text="My Marker"
           />
         </GoogleMapReact>

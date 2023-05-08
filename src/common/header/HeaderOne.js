@@ -7,7 +7,7 @@ import Darkmode from "./Darkmode";
 import useStickyHeader from "./useStickyHeader";
 
 
-const HeaderOne = ({btnStyle, HeaderSTyle}) => {
+const HeaderOne = ({btnStyle, HeaderSTyle, setPortFolioData = () =>{} }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
     const onCanvasHandler = () => {
         setOffcanvasShow(prev => !prev);
@@ -35,7 +35,7 @@ const HeaderOne = ({btnStyle, HeaderSTyle}) => {
                         <div className="col-lg-9 col-md-6 col-8 position-static">
                             <div className="header-right">
                                 <nav className="mainmenu-nav d-none d-lg-block">
-                                    <Nav />
+                                    <Nav setPortFolioData={setPortFolioData} />
                                 </nav>
                                 {/* <div className="header-btn">
                                     <a className={`btn-default ${btnStyle}`} target="_blank" href="https://themeforest.net/checkout/from_item/33571911?license=regular">BUY NOW</a>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import SEO from "../common/SEO";
@@ -17,6 +17,7 @@ import CalltoActionFive from "../elements/calltoaction/CalltoActionFive";
 import BlogList from "../components/blog/itemProp/BlogList";
 import BlogClassicData from "../data/blog/BlogList.json";
 import TestimonialOne from "../elements/testimonial/TestimonialOne";
+import api from "../api/api";
 var BlogListData = BlogClassicData.slice(0, 3);
 
 const PopupData = [
@@ -24,26 +25,76 @@ const PopupData = [
     id: "01",
     image: "./images/bg/bg-image-4.jpg",
     popupLink: [
-      "https://www.youtube.com/watch?v=ctsT5Y-InqE&ab_channel=Rainbow-Themes",
+      "https://www.youtube.com/embed/ctsT5Y-InqE?&autoplay=1",
     ],
   },
 ];
 
 const HomeDefault = () => {
+  const [portfolioData, setPortFolioData] = useState([]);
+  const [galleryData, setGalleryData] = useState([]);
+  const [blogList, setBlogList] = useState([]);
+
+  const getBlogData = () => {
+    try {
+      api
+        .get("/api/blog/v1/")
+        .then((response) => {
+          setBlogList(response.data?.application);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (err) {
+      console.log("err", err);
+    }
+  };
+
+
+  
+  const getCategoryData = (id) => {
+    if (!id) return;
+    try {
+      api
+        .get(`/api/subCategory/${id}`)
+        .then((response) => {
+          setGalleryData(response.data?.application);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (err) {
+      console.log("err", err);
+    }
+  };
+
+  useEffect(() =>{
+    getBlogData()
+  },[])
+
+  useEffect(() => {
+    if (portfolioData.length) {
+      const firstCategory = portfolioData[0];
+      const { _id } = firstCategory || {};
+      getCategoryData(_id);
+    }
+  }, [portfolioData]);
+
   return (
     <>
-      <SEO title="Business Consulting" />
+      <SEO title="PRIY Graphics Printing  Advertising Services in Surat ,Gujarat ,India" />
       <main className="page-wrapper">
         {/* <HeaderTopNews /> */}
         <HeaderOne
           btnStyle="btn-small round btn-icon"
           HeaderSTyle="header-transparent"
+          setPortFolioData={setPortFolioData}
         />
 
         {/* Start Slider Area  */}
         <div
           className="slider-area slider-style-1 variation-default height-850 bg_image"
-          data-black-overlay="7"
+          data-black-overlay="8"
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/images/bg/bg-image-3.jpg)`,
           }}
@@ -56,7 +107,7 @@ const HomeDefault = () => {
                     Your Partner for Marketing Success
                   </span>
                   <h1 className="title display-one">
-                    Graphics | Printing | Advertising.
+                    Graphics | Printing | Advertising
                   </h1>
                   <p className="description">
                     Your one-stop solution for exceptional design, service,
@@ -104,12 +155,12 @@ const HomeDefault = () => {
                   textAlign="text-center"
                   radiusRounded=""
                   subtitle="Our Portfolio"
-                  title="Our Design Showcase"
+                  title={portfolioData[0]?.categoryName}
                   description="Explore our portfolio of innovative and effective design solutions that have helped our clients succeed."
                 />
               </div>
             </div>
-            <PortfolioOne Column="col-lg-4 col-md-6 col-12 mt--30 portfolio" />
+            <PortfolioOne galleryData={galleryData} Column="col-lg-4 col-md-6 col-12 mt--30 portfolio" />
           </div>
         </div>
         {/* End Portfolio Area  */}
@@ -190,9 +241,9 @@ const HomeDefault = () => {
               </div>
             </div>
             <div className="row row--15">
-              {BlogListData.map((item) => (
+              {blogList.map((item) => (
                 <div
-                  key={item.id}
+                  key={item._id}
                   className="col-lg-4 col-md-6 col-sm-12 col-12 mt--30"
                 >
                   <BlogList StyleVar="box-card-style-default" data={item} />
