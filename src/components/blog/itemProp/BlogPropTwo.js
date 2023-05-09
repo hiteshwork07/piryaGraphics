@@ -50,10 +50,11 @@ const BlogPropTwo = ({ column ,blogList =[], StyleVarProp}) => {
             </div>
             <div className="col-lg-12">
                 <div className="rwt-load-more text-center mt--60">
-                    <button
+                    {/* <button
                         className="btn btn-default btn-icon"
                         onClick={handleLoadmorebl}
                         disabled={noMorePost ? "disabled" : null}
+                        style={{color :"#fff"}}
                     >
                         {noMorePost ? (
                         "No Post Here"
@@ -65,7 +66,7 @@ const BlogPropTwo = ({ column ,blogList =[], StyleVarProp}) => {
                             </span>
                         </span>
                         )}
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </>

@@ -33,15 +33,17 @@ function GalleryOne({ galleryItem }) {
           alt={subCategory}
         />
       </div>
-      {/* <div className="video-icon">
+      <div className="video-icon">
         <button
           className="btn-default rounded-player sm-size"
           onClick={() => setToggler(!toggler)}
         >
           <span>{iconHandel()}</span>
         </button>
-      </div> */}
-      <FsLightbox toggler={toggler} sources={popupLink} />
+      </div>
+      <FsLightbox toggler={toggler} sources={[
+            `${process.env.REACT_APP_BASE_URL}${subCategoryImage}`
+        ]} />
     </div>
   );
 }

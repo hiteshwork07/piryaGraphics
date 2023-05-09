@@ -53,7 +53,7 @@ const BusinessConsulting2 = () => {
                                     <p className="description">We help our clients succeed by creating brand identities, digital experiences, and print materials.</p>
                                     <div className="button-group">
                                         <a className="btn-default btn-medium round btn-icon" target="_blank" href="https://themeforest.net/checkout/from_item/33571911?license=regular">Purchase Now <i className="icon"><FiArrowRight /></i></a>
-                                        <Link className="btn-default btn-medium btn-border round btn-icon" to="#">Contact Us <i className="icon"><FiArrowRight /></i></Link>
+                                        <Link className="btn-default btn-medium btn-border round btn-icon" to="/contact">Contact Us <i className="icon"><FiArrowRight /></i></Link>
                                     </div>
                                 </div>
                             </div>

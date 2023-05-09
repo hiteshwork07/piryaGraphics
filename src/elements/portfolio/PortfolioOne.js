@@ -129,7 +129,7 @@ const PortfolioOne = ({ galleryData = [] }) => {
             className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30"
             key={item._id}
           >
-            <GalleryOne galleryItem={item} />
+            <GalleryOne galleryItem={item} popupLink={[item?.subCategoryImage]} />
           </div>
         ))}
       </div>

@@ -8,11 +8,7 @@
     "id": 2,
     "title": "Services",
     "quicklink": [
-      {
-        "id": 1,
-        "text": "About",
-        "url": "/about"
-      },
+      
       {
         "id": 4,
         "text": "Service",
@@ -35,6 +31,11 @@
     "id": 3,
     "title": "Solutions",
     "quicklink": [
+      {
+        "id": 1,
+        "text": "About Us",
+        "url": "/about-us"
+      },
       {
         "id": 3,
         "text": "Testimonial",

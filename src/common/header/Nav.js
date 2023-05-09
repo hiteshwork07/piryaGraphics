@@ -10,7 +10,9 @@ const Nav = ({setPortFolioData = () =>{}}) => {
       api
         .get("/api/category/")
         .then((response) => {
-          setCategoryList(response.data?.application);
+          const tempData = [...response.data?.application];
+          tempData.shift()
+          setCategoryList(tempData);
           setPortFolioData(response.data?.application)
         })
         .catch((error) => {

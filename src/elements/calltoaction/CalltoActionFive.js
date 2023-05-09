@@ -34,7 +34,7 @@ const CalltoActionFive = () => {
                                 animateOut="fadeInOut"
                                 animateOnce={true}>
                                     <div className="call-to-btn text-center">
-                                        <a className="btn-default btn-icon" href="#">{callToActionData.btnText} <i className="icon"><FiArrowRight /></i></a>
+                                        <a className="btn-default btn-icon" href="/contact">{callToActionData.btnText} <i className="icon"><FiArrowRight /></i></a>
                                     </div>
                                 </ScrollAnimation>
                             </div>

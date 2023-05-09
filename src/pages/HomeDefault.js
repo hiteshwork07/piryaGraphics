@@ -117,8 +117,7 @@ const HomeDefault = () => {
                   <div className="button-group">
                     <a
                       className="btn-default btn-medium round btn-icon"
-                      target="_blank"
-                      href="/"
+                      href="/contact"
                     >
                       Contact Us{" "}
                       <i className="icon">

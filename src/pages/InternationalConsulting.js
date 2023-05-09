@@ -35,7 +35,7 @@ const InternationalConsulting = () => {
                                     <p className="description">We help our clients succeed by creating brand identities, digital experiences, and print materials.</p>
                                     <div className="button-group">
                                         <Link className="btn-default btn-medium btn-icon" to="#">Purchase Now <i className="icon"><FiArrowRight /></i></Link>
-                                        <Link className="btn-default btn-medium btn-border btn-icon" to="#">Contact Us <i className="icon"><FiArrowRight /></i></Link>
+                                        <Link className="btn-default btn-medium btn-border btn-icon" to="/contact">Contact Us <i className="icon"><FiArrowRight /></i></Link>
                                     </div>
                                 </div>
                             </div>

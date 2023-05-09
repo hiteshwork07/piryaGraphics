@@ -58,7 +58,7 @@ const Marketing = () => {
                     </Link>
                     <Link
                       className="btn-default btn-medium btn-border round btn-icon"
-                      to="#"
+                      to="/contact"
                     >
                       Contact Us{" "}
                       <i className="icon">

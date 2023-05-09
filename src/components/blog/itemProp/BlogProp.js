@@ -55,6 +55,7 @@ const BlogProp = ({ column , StyleVarProp}) => {
                         className="btn btn-default btn-icon"
                         onClick={handleLoadmorebl}
                         disabled={noMorePost ? "disabled" : null}
+                        style={{color :"#fff"}}
                     >
                         {noMorePost ? (
                         "No Post Here"
