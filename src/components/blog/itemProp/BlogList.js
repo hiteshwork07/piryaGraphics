@@ -9,7 +9,7 @@ const BlogList = ({ data, StyleVar }) => {
    
     
     return (
-        <div className={`rn-card ${StyleVar}`}>
+        <div style={{height : "100%"}} className={`rn-card ${StyleVar}`}>
             <div className="inner">
                 <div className="thumbnail">
                     <Link to={process.env.PUBLIC_URL + `/blog-details/${data._id}`} className="image">
