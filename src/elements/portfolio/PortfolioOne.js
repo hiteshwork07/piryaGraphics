@@ -120,7 +120,9 @@ const PortfolioOne = ({ galleryData = [] }) => {
     //   }
     // }
   };
-  const galleryArray = noMorePost ? galleryData : galleryData.slice(0, 6)
+  const galleryArray = noMorePost ? galleryData : galleryData.slice(0, 6);
+  const galleryArrayImages = galleryArray.map((a) => `${process.env.REACT_APP_BASE_URL}${a.subCategoryImage}`)
+  console.log('galleryArray', galleryArray, galleryArrayImages)
   return (
     <>
       <div className="row mt_dec--30 row--15">
@@ -129,7 +131,7 @@ const PortfolioOne = ({ galleryData = [] }) => {
             className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30"
             key={item._id}
           >
-            <GalleryOne galleryItem={item} popupLink={[item?.subCategoryImage]} />
+            <GalleryOne galleryItem={item} popupLink={galleryArray.map((a) => `${process.env.REACT_APP_BASE_URL}${a.subCategoryImage}`)} />
           </div>
         ))}
       </div>

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import { FiPlay, FiZoomIn, FiFolderPlus } from "react-icons/fi";
 
-function GalleryOne({ galleryItem }) {
-  const { image, popupLink, subCategoryImage, subCategory } = galleryItem;
+function GalleryOne({ galleryItem, popupLink }) {
+  const { image, subCategoryImage, subCategory } = galleryItem;
+  
   const iconHandel = () => {
     if (popupLink) {
       if (popupLink.length > 1) {
@@ -41,9 +42,7 @@ function GalleryOne({ galleryItem }) {
           <span>{iconHandel()}</span>
         </button>
       </div>
-      <FsLightbox toggler={toggler} sources={[
-            `${process.env.REACT_APP_BASE_URL}${subCategoryImage}`
-        ]} />
+      <FsLightbox toggler={toggler} sources={popupLink} />
     </div>
   );
 }

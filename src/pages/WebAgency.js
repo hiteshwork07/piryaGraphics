@@ -43,7 +43,7 @@ const WebAgency = () => {
                                             <p className="description" dangerouslySetInnerHTML={{__html: data.description}}></p>
                                             <div className="button-group mt--30">
                                                 <a className="btn-default btn-large round" target="_blank" href="https://themeforest.net/checkout/from_item/33571911?license=regular">Explore Now</a>
-                                                <a className="btn-default btn-border btn-large round" href="/contact">Contact Us</a>
+                                                <Link className="btn-default btn-border btn-large round" to="/contact">Contact Us</Link>
                                             </div>
                                         </div>
                                     </div>

@@ -16,7 +16,7 @@ const ContactOne = () => {
                                         <FiHeadphones />
                                     </div>
                                     <div className="inner">
-                                        <h4 className="title">Contact Mobile number</h4>
+                                        <h4 style={{color :"#0F6678"}} className="title">Contact Mobile number</h4>
                                         <p><a href="tel:+91 96012 91632">+91 96012 91632</a></p>
                                     </div>
                                 </div>
@@ -28,7 +28,7 @@ const ContactOne = () => {
                                         <FiMail />
                                     </div>
                                     <div className="inner">
-                                        <h4 className="title">Our Email Address</h4>
+                                        <h4 style={{color :"#0F6678"}} className="title">Our Email Address</h4>
                                         <p><a href="mailto:mailto:contact@priygraphics.com">contact@priygraphics.com</a></p>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@ const ContactOne = () => {
                                         <FiMapPin />
                                     </div>
                                     <div className="inner">
-                                        <h4 className="title">Our Location</h4>
+                                        <h4 style={{color :"#0F6678"}} className="title">Our Location</h4>
                                         <p>Office No: 244, Silver Business Hub, Near Bapa Sitaram Chowk,<br /> Simada Jakatnaka, Surat.</p>
                                     </div>
                                 </div>

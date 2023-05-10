@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Copyright = () => {
   return (
@@ -9,13 +10,13 @@ const Copyright = () => {
             <div className="copyright-left">
               <ul className="ft-menu link-hover">
                 <li>
-                  <a href="/privacy-policy">Privacy Policy</a>
+                  <Link to="/privacy-policy">Privacy Policy</Link>
                 </li>
                 <li>
-                  <a href="/terms-and-conditions">Terms And Condition</a>
+                  <Link to="/terms-and-conditions">Terms And Condition</Link>
                 </li>
                 <li>
-                  <a href="/contact">Contact Us</a>
+                  <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>

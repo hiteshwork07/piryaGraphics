@@ -122,12 +122,12 @@ const Nav = ({setPortFolioData = () =>{}}) => {
       </li>
 
       <li className="has-droupdown">
-        <Link to={`/gallery?id=${categoryList[0]?._id}`}>Portfolio</Link>
+        <Link to={`/portfolio?id=${categoryList[0]?._id}`}>Portfolio</Link>
         <ul className="submenu">
           {categoryList.map((c) => {
             return (
               <li key={c._id}>
-                <Link to={`/gallery?id=${c._id}`}>{c.categoryName}</Link>
+                <Link to={`/portfolio?id=${c._id}`}>{c.categoryName}</Link>
               </li>
             );
           })}

@@ -125,7 +125,7 @@ const App = () => {
                     <Route path={`${process.env.PUBLIC_URL + "/split"}`} exact component={Split}/>
                     <Route path={`${process.env.PUBLIC_URL + "/call-to-action"}`} exact component={CalltoAction}/>
                     <Route path={`${process.env.PUBLIC_URL + "/video-popup"}`} exact component={Video}/>
-                    <Route path={`${process.env.PUBLIC_URL + "/gallery"}`} exact component={Gallery}/>
+                    <Route path={`${process.env.PUBLIC_URL + "/portfolio"}`} exact component={Gallery}/>
                     <Route path={`${process.env.PUBLIC_URL + "/contact"}`} exact component={Contact}/>
                     <Route path={`${process.env.PUBLIC_URL + "/brand"}`} exact component={Brand}/>
                     <Route path={`${process.env.PUBLIC_URL + "/advance-tab"}`} exact component={AdvanceTab}/>
@@ -136,7 +136,7 @@ const App = () => {
 
                     <Route path={`${process.env.PUBLIC_URL + "/error"}`} exact component={Error}/>
                     
-                    <Route path={`${process.env.PUBLIC_URL + "/portfolio"}`} exact component={Portfolio}/>
+                    {/* <Route path={`${process.env.PUBLIC_URL + "/portfolio"}`} exact component={Portfolio}/> */}
                     <Route path={`${process.env.PUBLIC_URL + "/portfolio-three-column"}`} exact component={portfolioThreeColumn}/>
                     <Route path={`${process.env.PUBLIC_URL + "/portfolio-full-width"}`} exact component={PortfolioFullWidth}/>
                     <Route path={`${process.env.PUBLIC_URL + "/portfolio-grid-layout"}`} exact component={PortfolioGrid}/>

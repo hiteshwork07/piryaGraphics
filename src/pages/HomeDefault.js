@@ -115,15 +115,15 @@ const HomeDefault = () => {
                     advertising needs.{" "}
                   </p>
                   <div className="button-group">
-                    <a
+                    <Link
                       className="btn-default btn-medium round btn-icon"
-                      href="/contact"
+                      to="/contact"
                     >
                       Contact Us{" "}
                       <i className="icon">
                         <FiArrowRight />
                       </i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
