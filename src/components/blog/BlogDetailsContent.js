@@ -8,7 +8,7 @@ import { FiUser, FiCalendar } from "react-icons/fi";
 import { getFormatedData } from "../../utils/helper";
 
 const BlogDetailsContent = ({ data }) => {
-  console.log("data", data);
+  
   return (
     <>
       <div className="post-page-banner rn-section-gapTop">

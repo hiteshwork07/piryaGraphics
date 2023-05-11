@@ -122,7 +122,7 @@ const PortfolioOne = ({ galleryData = [] }) => {
   };
   const galleryArray = noMorePost ? galleryData : galleryData.slice(0, 6);
   const galleryArrayImages = galleryArray.map((a) => `${process.env.REACT_APP_BASE_URL}${a.subCategoryImage}`)
-  console.log('galleryArray', galleryArray, galleryArrayImages)
+  
   return (
     <>
       <div className="row mt_dec--30 row--15">

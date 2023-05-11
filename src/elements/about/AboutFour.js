@@ -28,7 +28,7 @@ const AboutFour = ({image}) => {
                     <div className="col-lg-6 mt_md--40 mt_sm--40">
                         <div className="content">
                             <div className="inner">
-                                <h3 className="title"><strong style={{color :"black"}}>Our Company in Motion</strong></h3>
+                                <h3 className="title"><strong >Our Company in Motion</strong></h3>
                                 <ul className="feature-list">
                                     <li>
                                         <div className="icon">
