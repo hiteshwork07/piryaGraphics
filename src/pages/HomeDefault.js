@@ -3,22 +3,19 @@ import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import SEO from "../common/SEO";
 import HeaderOne from "../common/header/HeaderOne";
-import HeaderTopNews from "../common/header/HeaderTopNews";
 import FooterOne from "../common/footer/FooterOne";
 import Copyright from "../common/footer/Copyright";
 import ServiceOne from "../elements/service/ServiceOne";
 import SectionTitle from "../elements/sectionTitle/SectionTitle";
 import PortfolioOne from "../elements/portfolio/PortfolioOne";
 import Separator from "../elements/separator/Separator";
-import TimelineOne from "../elements/timeline/TimelineOne";
 import VideoItem from "../elements/video/VideoItem";
-import TestimonialThree from "../elements/testimonial/TestimonialThree";
+import ReactLoading from "react-loading";
 import CalltoActionFive from "../elements/calltoaction/CalltoActionFive";
 import BlogList from "../components/blog/itemProp/BlogList";
 import BlogClassicData from "../data/blog/BlogList.json";
 import TestimonialOne from "../elements/testimonial/TestimonialOne";
 import api from "../api/api";
-var BlogListData = BlogClassicData.slice(0, 3);
 
 const PopupData = [
   {
@@ -33,9 +30,12 @@ const PopupData = [
 const HomeDefault = () => {
   const [portfolioData, setPortFolioData] = useState([]);
   const [galleryData, setGalleryData] = useState([]);
+  const [galleryDataLoading, setGalleryDataLoading] = useState(false);
   const [blogList, setBlogList] = useState([]);
+  const [blogListLoading, setBlogListLoading] = useState(false);
 
   const getBlogData = () => {
+    setBlogListLoading(true)
     try {
       api
         .get("/api/blog/v1/")
@@ -47,12 +47,15 @@ const HomeDefault = () => {
         });
     } catch (err) {
       console.log("err", err);
+    }finally{
+      setBlogListLoading(false)
     }
   };
 
 
   
   const getCategoryData = (id) => {
+    setGalleryDataLoading(true)
     if (!id) return;
     try {
       api
@@ -65,6 +68,8 @@ const HomeDefault = () => {
         });
     } catch (err) {
       console.log("err", err);
+    }finally{
+      setGalleryDataLoading(false)
     }
   };
 
@@ -159,7 +164,7 @@ const HomeDefault = () => {
                 />
               </div>
             </div>
-            <PortfolioOne galleryData={galleryData} Column="col-lg-4 col-md-6 col-12 mt--30 portfolio" />
+            <PortfolioOne galleryData={galleryData} galleryDataLoading={galleryDataLoading} Column="col-lg-4 col-md-6 col-12 mt--30 portfolio" />
           </div>
         </div>
         {/* End Portfolio Area  */}
@@ -240,14 +245,22 @@ const HomeDefault = () => {
               </div>
             </div>
             <div className="row row--15">
-              {blogList.map((item) => (
+              {blogListLoading ? <div className="center-flex">
+            <ReactLoading
+              type="spinningBubbles"
+              color="#1B7284"
+              height={"20%"}
+              width={"20%"}
+            />
+            </div> : <>{blogList.map((item) => (
                 <div
                   key={item._id}
                   className="col-lg-4 col-md-6 col-sm-12 col-12 mt--30"
                 >
                   <BlogList StyleVar="box-card-style-default" data={item} />
                 </div>
-              ))}
+              ))}</>}
+              
             </div>
           </div>
         </div>

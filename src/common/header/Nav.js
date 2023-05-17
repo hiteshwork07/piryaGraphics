@@ -10,16 +10,18 @@ const Nav = ({setPortFolioData = () =>{}}) => {
       api
         .get("/api/category/")
         .then((response) => {
-          const tempData = [...response.data?.application];
+          const tempData = [...response.data?.application].reverse();
           tempData.shift()
           setCategoryList(tempData);
-          setPortFolioData(response.data?.application)
+          setPortFolioData([...response.data?.application].reverse())
         })
         .catch((error) => {
           console.log(error);
         });
     } catch (err) {
       console.log("err", err);
+    }
+    finally{
     }
   };
 

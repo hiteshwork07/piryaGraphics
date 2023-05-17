@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactLoading from "react-loading"
 import SEO from "../../common/SEO";
 import Layout from "../../common/Layout";
 import SectionTitle from "../sectionTitle/SectionTitle";
@@ -11,9 +12,11 @@ const Elements = () => {
 
   const [galleryData, setGalleryData] = useState([]);
   const [portFolioData, setPortFolioData] = useState([]);
+  const [galleryDataLoading, setGalleryDataLoading] = useState(false);
 
   const getCategoryData = (id) => {
     if (!id) return;
+    setGalleryDataLoading(true)
     try {
       api
         .get(`/api/subCategory/${id}`)
@@ -25,6 +28,8 @@ const Elements = () => {
         });
     } catch (err) {
       console.log("err", err);
+    }finally{
+      setGalleryDataLoading(false)
     }
   };
 
@@ -39,7 +44,7 @@ const Elements = () => {
   return (
     <>
       <SEO title="Gallery || PRIY Graphics | Printing | Advertising Services in Surat - React Business  Template" />
-      <Layout setPortFolioData={setPortFolioData}>
+      <Layout setPortFolioData={setPortFolioData} >
         <div className="main-content">
           {/* Start Elements Area  */}
           {/* <div className="rwt-gallery-area rn-section-gap">
@@ -81,14 +86,15 @@ const Elements = () => {
                 </div>
               </div>
               <div className="row mt_dec--30 row--15">
-                {[...galleryData].map((item) => (
+                {galleryDataLoading ? <div className="center-flex"> <ReactLoading type="spinningBubbles" color="#1B7284" height={'20%'} width={'20%'} /> </div> : <>{[...galleryData].map((item) => (
                   <div
                     className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30"
                     key={item._id}
                   >
                     <GalleryOne galleryItem={item} />
                   </div>
-                ))}
+                ))}</>}
+                
               </div>
             </div>
           </div>

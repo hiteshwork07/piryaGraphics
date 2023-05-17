@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import BlogClassicData from "../data/blog/BlogList.json";
+import ReactLoading from "react-loading"
 import BlogDetailsContent from "../components/blog/BlogDetailsContent";
 import SEO from "../common/SEO";
 import Layout from "../common/Layout";
@@ -11,8 +11,10 @@ const BlogDetails = ({
   },
 }) => {
   const [blogInfo, setBlogInfo] = useState({});
+  const [blogInfoLoading, setBlogInfoLoading] = useState(false);
 
   const getBlogData = () => {
+    setBlogInfoLoading(true)
     try {
       api
         .get("/api/blog/v1/")
@@ -27,6 +29,8 @@ const BlogDetails = ({
         });
     } catch (err) {
       console.log("err", err);
+    }finally{
+      setBlogInfoLoading(false)
     }
   };
 
@@ -39,9 +43,10 @@ const BlogDetails = ({
       <SEO title="Blog Details || PRIY Graphics | Printing | Advertising Services in Surat" />
       <Layout>
         <div className="rn-blog-details-area">
-          {Object.keys(blogInfo).length && (
+          {blogInfoLoading ? <div className="center-flex"> <ReactLoading type="spinningBubbles" color="#1B7284" height={'20%'} width={'20%'} /> </div> : <>{Object.keys(blogInfo).length && (
             <BlogDetailsContent data={blogInfo} />
-          )}
+          )}</>}
+          
         </div>
       </Layout>
     </>

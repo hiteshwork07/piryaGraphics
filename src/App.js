@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { Switch, Route, HashRouter as Router} from 'react-router-dom';
 import PageScrollTop from './components/pageToTop/PageScrollTop'
 
 // Pages import Here 

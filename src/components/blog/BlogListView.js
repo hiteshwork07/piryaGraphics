@@ -6,17 +6,18 @@ import BlogPropTwo from "./itemProp/BlogPropTwo";
 import api from "../../api/api";
 
 const BlogListView = () => {
-  const [blogList, setBlogList] = useState([]);
+  const [blogList, setBlogList] = useState({data:[], loading : true});
 
   const getBlogData = () => {
     try {
       api
         .get("/api/blog/v1/")
         .then((response) => {
-          setBlogList(response.data?.application);
+          setBlogList({data:response.data?.application, loading : false});
         })
         .catch((error) => {
           console.log(error);
+          setBlogList({data:[], loading : false});
         });
     } catch (err) {
       console.log("err", err);
