@@ -86,14 +86,18 @@ const id = location?.search?.split("?id=")[1]
                 </div>
               </div>
               <div className="row mt_dec--30 row--15">
-                {galleryDataLoading ? <div className="center-flex"> <ReactLoading type="spinningBubbles" color="#1B7284" height={'20%'} width={'20%'} /> </div> : <>{[...galleryData].map((item) => (
-                  <div
+                {galleryDataLoading ? <div className="center-flex"> <ReactLoading type="spinningBubbles" color="#1B7284" height={'20%'} width={'20%'} /> </div> : <>{[...galleryData].map((item) => {
+                  const popupLinkArray = galleryData.map(
+                    (a) => `${process.env.REACT_APP_BASE_URL}${a.subCategoryImage}`
+                  );
+                  const popupLinkImage = [`${process.env.REACT_APP_BASE_URL}${item.subCategoryImage}` , ...popupLinkArray]
+                 return <div
                     className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30"
                     key={item._id}
                   >
-                    <GalleryOne galleryItem={item} />
+                    <GalleryOne galleryItem={item} popupLink={[...new Set(popupLinkImage)]} />
                   </div>
-                ))}</>}
+                })}</>}
                 
               </div>
             </div>
