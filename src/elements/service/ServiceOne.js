@@ -55,7 +55,7 @@ const ServiceOne = ({textAlign, serviceStyle, isHomePage = false}) => {
                     style={{height : "100%"}}
                     animateOnce={true}>
                         <div style={{height : "calc(100% - 55px)"}} className={`service ${serviceStyle} ${textAlign}`}>
-                            <div className="icon">
+                            <div className="icon icon-theme">
                                 {val.icon}
                             </div>
                             <div className="content">

@@ -178,3 +178,15 @@
     align-items: center;
     justify-content: center;
 }
+
+.icon-theme{
+    svg{
+        fill: #fff;
+    }
+    
+}
+.light .icon-theme{
+    svg{
+        fill: #000000;
+    }
+}
