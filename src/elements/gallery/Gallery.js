@@ -5,11 +5,11 @@ import Layout from "../../common/Layout";
 import SectionTitle from "../sectionTitle/SectionTitle";
 import GalleryOne from "./GalleryOne";
 import api from "../../api/api";
+import { useLocation } from "react-router-dom";
 
 const Elements = () => {
-  const params = new URL(document.location).searchParams;
-  const id = params.get("id");
-
+  const location = useLocation()
+const id = location?.search?.split("?id=")[1]
   const [galleryData, setGalleryData] = useState([]);
   const [portFolioData, setPortFolioData] = useState([]);
   const [galleryDataLoading, setGalleryDataLoading] = useState(false);
