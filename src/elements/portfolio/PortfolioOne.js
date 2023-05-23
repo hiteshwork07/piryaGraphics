@@ -53,9 +53,7 @@ const PortfolioOne = ({ galleryData = [], galleryDataLoading }) => {
     setVisibleItems(tempData);
   };
 
-  const handleLoadmore = (e) => {
-    e.preventDefault();
-    let tempCount = dataVisibleCount + dataIncrement;
+  const handleLoadmore = () => {
     setNoMorePost(noMorePost + 6);
     // if (dataVisibleCount >= getAllItems.length) {
     // } else {
@@ -132,7 +130,7 @@ const PortfolioOne = ({ galleryData = [], galleryDataLoading }) => {
             <div className="rwt-load-more text-center mt--50">
               <button
                 className="btn btn-default btn-large btn-icon"
-                onClick={handleLoadmore}
+                onClick={() => handleLoadmore()}
               >
                 <span>
                     Load More
