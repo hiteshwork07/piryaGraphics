@@ -29,7 +29,7 @@ const PortfolioOne = ({ galleryData = [], galleryDataLoading }) => {
   const [getAllItems] = useState(alldata);
   const [dataVisibleCount, setDataVisibleCount] = useState(6);
   const [dataIncrement] = useState(6);
-  const [noMorePost, setNoMorePost] = useState(false);
+  const [noMorePost, setNoMorePost] = useState(6);
   const [activeFilter, setActiveFilter] = useState("");
   const [visibleItems, setVisibleItems] = useState([]);
   useEffect(() => {
@@ -56,7 +56,7 @@ const PortfolioOne = ({ galleryData = [], galleryDataLoading }) => {
   const handleLoadmore = (e) => {
     e.preventDefault();
     let tempCount = dataVisibleCount + dataIncrement;
-    setNoMorePost(true);
+    setNoMorePost(noMorePost + 6);
     // if (dataVisibleCount >= getAllItems.length) {
     // } else {
     //   setDataVisibleCount(tempCount);
@@ -71,7 +71,7 @@ const PortfolioOne = ({ galleryData = [], galleryDataLoading }) => {
     //   }
     // }
   };
-  const galleryArray = noMorePost ? galleryData : galleryData.slice(0, 6);
+  const galleryArray = galleryData.slice(0, noMorePost) ;
   
   const galleryArrayImages = galleryArray.map(
     (a) => `${process.env.REACT_APP_BASE_URL}${a.subCategoryImage}`
@@ -126,25 +126,20 @@ const PortfolioOne = ({ galleryData = [], galleryDataLoading }) => {
         )}
       </div>
 
-      {galleryData.length > 6 && !noMorePost && (
+      {galleryData.length > noMorePost && (
         <div className="row row--15">
           <div className="col-lg-12">
             <div className="rwt-load-more text-center mt--50">
               <button
                 className="btn btn-default btn-large btn-icon"
                 onClick={handleLoadmore}
-                disabled={noMorePost ? "disabled" : null}
               >
-                {noMorePost ? (
-                  "No Item Here"
-                ) : (
-                  <span>
+                <span>
                     Load More
                     <span className="icon">
                       <FaSpinner />
                     </span>
                   </span>
-                )}
               </button>
             </div>
           </div>
