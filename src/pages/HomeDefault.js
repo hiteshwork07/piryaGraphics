@@ -159,7 +159,7 @@ const HomeDefault = () => {
                   textAlign="text-center"
                   radiusRounded=""
                   subtitle="Our Portfolio"
-                  title={portfolioData[0]?.categoryName}
+                  title={"Our Design Showcase"}
                   description="Explore our portfolio of innovative and effective design solutions that have helped our clients succeed."
                 />
               </div>

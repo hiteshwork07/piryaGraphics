@@ -6,13 +6,23 @@ import SectionTitle from "../sectionTitle/SectionTitle";
 import GalleryOne from "./GalleryOne";
 import api from "../../api/api";
 import { useLocation } from "react-router-dom";
+import { FaSpinner } from "react-icons/fa";
 
 const Elements = () => {
   const location = useLocation()
 const id = location?.search?.split("?id=")[1]
   const [galleryData, setGalleryData] = useState([]);
+  const [noMorePost, setNoMorePost] = useState(false);
   const [portFolioData, setPortFolioData] = useState([]);
   const [galleryDataLoading, setGalleryDataLoading] = useState(false);
+
+
+  const galleryArray = noMorePost ? galleryData : galleryData.slice(0, 6);
+
+  const handleLoadmore = (e) => {
+    e.preventDefault();
+    setNoMorePost(true);
+  };
 
   const getCategoryData = (id) => {
     if (!id) return;
@@ -35,8 +45,14 @@ const id = location?.search?.split("?id=")[1]
 
   useEffect(() => {
     if (id) {
+      if(noMorePost){
+        setNoMorePost(false);
+      }
       getCategoryData(id);
     } else {
+      if(noMorePost){
+        setNoMorePost(false);
+      }
       getCategoryData(portFolioData[0]?._id)
     }
   }, [id, portFolioData]);
@@ -86,8 +102,8 @@ const id = location?.search?.split("?id=")[1]
                 </div>
               </div>
               <div className="row mt_dec--30 row--15">
-                {galleryDataLoading ? <div className="center-flex"> <ReactLoading type="spinningBubbles" color="#1B7284" height={'20%'} width={'20%'} /> </div> : <>{[...galleryData].map((item) => {
-                  const popupLinkArray = galleryData.map(
+                {galleryDataLoading ? <div className="center-flex"> <ReactLoading type="spinningBubbles" color="#1B7284" height={'20%'} width={'20%'} /> </div> : <>{[...galleryArray].map((item) => {
+                  const popupLinkArray = galleryArray.map(
                     (a) => `${process.env.REACT_APP_BASE_URL}${a.subCategoryImage}`
                   );
                   const popupLinkImage = [`${process.env.REACT_APP_BASE_URL}${item.subCategoryImage}` , ...popupLinkArray]
@@ -100,6 +116,31 @@ const id = location?.search?.split("?id=")[1]
                 })}</>}
                 
               </div>
+
+              {galleryData.length > 6 && !noMorePost && (
+        <div className="row row--15">
+          <div className="col-lg-12">
+            <div className="rwt-load-more text-center mt--50">
+              <button
+                className="btn btn-default btn-large btn-icon"
+                onClick={handleLoadmore}
+                disabled={noMorePost ? "disabled" : null}
+              >
+                {noMorePost ? (
+                  "No Item Here"
+                ) : (
+                  <span>
+                    Load More
+                    <span className="icon">
+                      <FaSpinner />
+                    </span>
+                  </span>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
             </div>
           </div>
           {/* End Elements Area  */}
