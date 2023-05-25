@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../../api/api";
 
-const Nav = ({setPortFolioData = () =>{}}) => {
+const Nav = ({setPortFolioData = () =>{}, onClose = () =>{}}) => {
   const [categoryList, setCategoryList] = useState([]);
 
   const getCategoryApi = () => {
@@ -33,7 +33,7 @@ const Nav = ({setPortFolioData = () =>{}}) => {
   return (
     <ul className="mainmenu">
       <li className="has-droupdown">
-        <Link to="/">Home</Link>
+        <Link onClick={() =>onClose()} to="/">Home</Link>
         {/* <ul className="submenu">
                     <li><Link to="/business-consulting">Business Consulting</Link></li>
                     <li><Link to="/business-consulting-2">Business Consulting 02</Link></li>
@@ -124,7 +124,7 @@ const Nav = ({setPortFolioData = () =>{}}) => {
       </li>
 
       <li className="has-droupdown">
-        <Link to={`/portfolio?id=${categoryList[0]?._id}`}>Portfolio</Link>
+        <Link onClick={(e) => e.preventDefault()} to="#">Portfolio</Link>
         <ul className="submenu">
           {categoryList.map((c) => {
             return (
