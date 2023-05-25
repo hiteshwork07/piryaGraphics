@@ -129,7 +129,7 @@ const Nav = ({setPortFolioData = () =>{}, onClose = () =>{}}) => {
           {categoryList.map((c) => {
             return (
               <li key={c._id}>
-                <Link to={`/portfolio?id=${c._id}`}>{c.categoryName}</Link>
+                <Link onClick={() =>onClose()} to={`/portfolio?id=${c._id}`}>{c.categoryName}</Link>
               </li>
             );
           })}
