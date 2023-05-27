@@ -118,3 +118,24 @@
     }
   }
 }
+
+
+
+.blogWrapper {
+  border-radius: 10px;
+  box-shadow: 0 0px 40px -10px rgb(67, 245, 245);
+  color: white;
+  pointer-events: auto;
+  z-index: 9;
+  transition: all 150ms ease;
+  will-change: transform, box-shadow, background;
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+}
+
+.blogWrapper:hover{
+  scale: 1.1;
+  speed: 1000;
+}

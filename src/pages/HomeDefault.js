@@ -255,7 +255,7 @@ const HomeDefault = () => {
             </div> : <>{blogList.map((item) => (
                 <div
                   key={item._id}
-                  className="col-lg-4 col-md-6 col-sm-12 col-12 mt--30"
+                  className="col-lg-4 col-md-6 col-sm-12 col-12 mt--30 blogWrapper"
                 >
                   <BlogList StyleVar="box-card-style-default" data={item} />
                 </div>

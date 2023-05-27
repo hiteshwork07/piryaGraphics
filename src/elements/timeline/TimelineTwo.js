@@ -38,7 +38,7 @@ const TimelineTwo = ({classVar}) => {
                             animateOnce={true}>
                                 <h6 className="title">{data.title}</h6>
                             </ScrollAnimation>
-                            <div className="progress-line">
+                            <div className="progress-line colorAnimationWrapper">
                                 <div className="line-inner"></div>
                             </div>
                             <div className="progress-dot">

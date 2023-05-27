@@ -191,7 +191,12 @@ Timeline Area
     padding: 20px 50px 50px 50px;
     border-radius: var(--radius-big);
 }
-
+$green: #4cd964;
+$turquoise: #5ac8fa;
+$blue: #007aff;
+$light-blue: #7DC8E8;
+$purple: #5856d6;
+$red: #ff2d55;
 .rn-timeline-single {
     margin-top: 30px;
 
@@ -205,8 +210,9 @@ Timeline Area
             box-shadow: none;
             margin: 20px 0;
             width: 100%;
-           
-
+            background-image: linear-gradient(to right, $green, $turquoise, $blue, $light-blue, $purple, $red);
+            animation: colorAnimation 1s infinite;
+              
             .line-inner {
                 flex-direction: column;
                 justify-content: center;
@@ -336,3 +342,26 @@ Timeline Area
 
 
 }
+
+@keyframes colorAnimation {
+    0% { 
+      background-image: 
+      linear-gradient(to right, $green, $turquoise, $blue, $light-blue, $purple, $red);
+    }
+    20% { 
+      background-image: 
+      linear-gradient(to right, $turquoise, $blue, $light-blue, $purple, $red, $green);
+    }
+    40% { 
+      background-image: 
+      linear-gradient(to right, $blue, $light-blue, $purple, $red, $green, $turquoise);
+    }
+    60% { 
+      background-image: 
+      linear-gradient(to right, $light-blue, $purple, $red, $green, $turquoise, $blue);
+    }
+    100% { 
+      background-image: 
+      linear-gradient(to right, $purple, $red, $green, $turquoise, $blue, $light-blue);
+    }
+  }

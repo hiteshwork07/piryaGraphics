@@ -97,3 +97,6 @@
 @import 'footer/copyright';
 @import 'footer/darkmode';
 
+iframe {
+    pointer-events: none;
+  }
