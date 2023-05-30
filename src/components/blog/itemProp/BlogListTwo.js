@@ -40,13 +40,13 @@ const BlogListTwo = ({ data, StyleVar }) => {
               {data.blogName}
             </Link>
           </h4>
+          <div className="blog-details-content-description">
           <div className="rn-meta-list">
-            {/* <li><Link to={process.env.REACT_APP_BASE_URL + `/archive/${slugify(data .author)}`}>{data.author}</Link></li> */}
-            {/* <li className="separator">/</li> */}
             <span>{formattedDate}</span><span style={{marginLeft:10}}>- {data.author}</span>
           </div>
           <div className="description-container">
-          <p className="descriptiion">{data.description}</p>
+          <div className="descriptiion" dangerouslySetInnerHTML={{__html:data.description}}></div>
+          </div>
           </div>
         </div>
       </div>

@@ -8,9 +8,8 @@ import { FiUser, FiCalendar } from "react-icons/fi";
 import { getFormatedData } from "../../utils/helper";
 
 const BlogDetailsContent = ({ data }) => {
-  const descriptionText = data.description.split(".");
-  descriptionText.splice(-1);
-
+  const descriptionText = data.description
+  
   return (
     <>
       <div className="post-page-banner rn-section-gapTop">
@@ -54,11 +53,9 @@ const BlogDetailsContent = ({ data }) => {
                 {/* <div
                   dangerouslySetInnerHTML={{ __html: data.description }}
                 /> */}
-                <ul>
-                  {descriptionText.map((a) => {
-                    return <li className="content-desc">{a}</li>;
-                  })}
-                </ul>
+                <div className="blog-details-content-description">
+                 <p dangerouslySetInnerHTML={{__html: descriptionText}}></p>
+                </div>
                   <div style={{textAlign:"end"}}>~ {data.author}</div>
                 {/* <div className="category-meta">
                                     <span className="text">Tags:</span>
