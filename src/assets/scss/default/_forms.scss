@@ -19,6 +19,7 @@ input {
 }
 
 select {
+    background: #0f0f11;
     transition: 0.3s;
     height: 60px;
     line-height: 28px;
@@ -277,24 +278,28 @@ input[type="submit"] {
 
 
 .contact-form--1 form input::-webkit-input-placeholder,
+.contact-form--1 form select::-webkit-input-placeholder,
 .contact-form--1 form textarea::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: var(--color-body) !important;
 }
 
 .contact-form--1 form input::-moz-placeholder,
+.contact-form--1 form select::-webkit-input-placeholder,
 .contact-form--1 form textarea::-moz-placeholder {
     /* Firefox 19+ */
     color: var(--color-body) !important;
 }
 
 .contact-form--1 form input:-ms-input-placeholder,
+.contact-form--1 form select::-webkit-input-placeholder,
 .contact-form--1 form textarea:-ms-input-placeholder {
     /* IE 10+ */
     color: var(--color-body) !important;
 }
 
 .contact-form--1 form input:-moz-placeholder,
+.contact-form--1 form select::-webkit-input-placeholder,
 .contact-form--1 form textarea:-moz-placeholder {
     /* Firefox 18- */
     color: var(--color-body) !important;

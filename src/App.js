@@ -72,6 +72,7 @@ import Error from "./pages/Error";
 import './assets/scss/style.scss';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
+import LandingPage from "./pages/LandingPage";
 
 
 
@@ -143,8 +144,8 @@ const App = () => {
                     <Route path={`${process.env.PUBLIC_URL + "/portfolio-grid-layout"}`} exact component={PortfolioGrid}/>
                     <Route path={`${process.env.PUBLIC_URL + "/portfolio-box-layout"}`} exact component={PortfolioBoxLayout}/>
                     <Route path={`${process.env.PUBLIC_URL + "/portfolio-details/:id"}`} exact component={PortfolioDetails}/>
-                    
 
+                    <Route path={`${process.env.PUBLIC_URL + "/product_packaging_landingPage"}`} exact component={LandingPage}/>
                 </Switch>
             </PageScrollTop>
         </Router>

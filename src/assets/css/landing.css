@@ -1,0 +1,129 @@
+.line-height-2 {
+    line-height: 2 !important;
+}
+
+.w-35 {
+    width: 35% !important;
+}
+
+.w-65 {
+    width: 65% !important;
+}
+
+.fs-17 {
+    font-size: 18px !important;
+}
+
+.fs-18 {
+    font-size: 26px !important;
+}
+
+.fs-24 {
+    font-size: 24px !important;
+}
+
+.fs-32 {
+    font-size: 32px !important;
+}
+
+.mb-7 {
+    margin-bottom: 7% !important;
+}
+
+.bg-color {
+    background: #0f0f11 !important;
+}
+
+.p-xy {
+    padding: 3rem 10rem !important
+}
+
+.padding {
+    padding: 30px 40px 30px 230px !important;
+}
+
+.padding-0-115 {
+    padding: 0 115px !important;
+}
+
+.padding-reverse {
+    padding: 30px 230px 30px 40px !important;
+}
+
+.padding-div {
+    padding: 80px 230px 80px 230px !important;
+}
+
+.padding-right-10 {
+    padding-right: 10% !important;
+}
+
+.padding-0 {
+    padding: 0 0 !important;
+}
+
+.padding-0-35 {
+    padding: 0 35px !important;
+}
+
+.box-shadow {
+    box-shadow: 0 0 20px rgb(14 113 127) !important;
+}
+
+.modal-title {
+    /*color: rgb(76, 209, 160) !important;*/
+    color: #1d7183 !important;
+    font-size: 32px !important;
+}
+
+.modal-content {
+    box-shadow: 0 0 20px rgb(14 113 127) !important;
+}
+
+.image {
+    height: 713px !important;
+    width: 552px !important;
+}
+
+.p-40 {
+    padding: 0 40px !important;
+}
+
+.p-10 {
+    padding: 10px 0 !important;
+}
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    .d-max-none {
+        display: none !important;
+    }
+
+    .w-max-100 {
+        width: 100% !important;
+    }
+
+    .p-max-40 {
+        padding: 0 40px !important;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    .display-center {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.error {
+    color: red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-close {
+    margin-right: 10px !important;
+}

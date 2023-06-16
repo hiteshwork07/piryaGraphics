@@ -1,5 +1,5 @@
 import {useState, useRef} from "react";
-import { FiMenu } from "react-icons/fi";
+import {FiMenu} from "react-icons/fi";
 import Logo from "../../elements/logo/Logo";
 import Nav from './Nav';
 import MobileMenu from './MobileMenu';
@@ -7,51 +7,54 @@ import Darkmode from "./Darkmode";
 import useStickyHeader from "./useStickyHeader";
 
 
-const HeaderOne = ({btnStyle, HeaderSTyle, setPortFolioData = () =>{} }) => {
+const HeaderOne = ({btnStyle, HeaderSTyle, setPortFolioData = () =>{}, darkMode }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
     const onCanvasHandler = () => {
         setOffcanvasShow(prev => !prev);
     }
     const ref = useRef();
     let [check, setCheck] = useState(true);
-    const sticky = useStickyHeader( 50 );
+    const sticky = useStickyHeader(50);
     const headerClasses = `header-default ${(sticky && check) ? 'sticky' : ''}`
-    const { clientHeight } = ref;
-    
+    const {clientHeight} = ref;
+
     const checkChange = (value) => {
-      setCheck(value);
+        setCheck(value);
     };
     return (
         <>
             <header ref={ref} className={`rn-header header-default sticky ${HeaderSTyle} ${headerClasses}`}>
                 <div className="container position-relative">
                     <div className="row align-items-center row--0">
-                        <div className="col-lg-3 col-md-6 col-4">
-                            <Logo 
+                        <div className="col-lg-3 col-md-6 col-9 display-center">
+                            <Logo
                                 image={`${process.env.PUBLIC_URL}/images/logo/logo.png`}
                                 image2={`${process.env.PUBLIC_URL}/images/logo/logo-dark.png`}
                             />
                         </div>
-                        <div className="col-lg-9 col-md-6 col-8 position-static">
+                        <div className="col-lg-9 col-md-6 col-3 position-static">
                             <div className="header-right">
                                 <nav className="mainmenu-nav d-none d-lg-block">
-                                    <Nav setPortFolioData={setPortFolioData} />
+                                    <Nav setPortFolioData={setPortFolioData}/>
                                 </nav>
                                 {/* <div className="header-btn">
                                     <a className={`btn-default ${btnStyle}`} target="_blank" href="https://themeforest.net/checkout/from_item/33571911?license=regular">BUY NOW</a>
                                 </div> */}
                                 <div className="mobile-menu-bar ml--5 d-block d-lg-none">
                                     <div className="hamberger">
-                                        <span className="hamberger-button" onClick={onCanvasHandler}><FiMenu /></span>
+                                        <span className="hamberger-button" onClick={onCanvasHandler}><FiMenu/></span>
                                     </div>
                                 </div>
-                                <Darkmode />
-                            </div>  
+                                {
+                                    !darkMode &&
+                                    <Darkmode/>
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
             </header>
-            <MobileMenu show={ofcanvasShow} onClose={onCanvasHandler}  />
+            <MobileMenu show={ofcanvasShow} onClose={onCanvasHandler}/>
         </>
     )
 }

@@ -46,6 +46,7 @@ body {
         .popup-mobile-menu .inner .header-top .close-menu .close-button,
         .footer-style-default .footer-top .rn-footer-widget .title,
         .rn-call-to-action.style-8 .title,
+        .rn-call-to-action-2.style-8 .title,
         .rn-newsletter-default .newsletter-section-title .title {
             color: #181818;
         }
@@ -85,6 +86,7 @@ body {
         .footer-style-default .footer-top .rn-footer-widget .footer-link li a,
         .footer-style-default .footer-top .rn-footer-widget .subtitle,
         .rn-call-to-action.style-8 .content .subtitle,
+        .rn-call-to-action-2.style-8 .content .subtitle,
         .rn-newsletter-default .newsletter-section-title .description,
         .slider-style-5 .inner .subtitle,
         .slider-style-5 .inner .title {
@@ -99,6 +101,7 @@ body {
         }
 
         .form-group input,
+        .form-group select,
         .form-group textarea,
         .rn-accordion-style.rn-accordion-02 .card .card-header,
         .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item,
@@ -126,9 +129,13 @@ body {
         .popup-mobile-menu .mainmenu li + li ,
         .clltoaction-style-default.style-7 .content-wrapper,
         .copyright-style-one,
-        .footer-style-default .newsletter-form .form-group input,
+        .footer-style-default .newsletter-form .form-group input .form-group select,
         .newsletter-area .border-top-bottom {
             border-color: #00000024;
+        }
+
+        .form-group select {
+            background: #f5f8fa !important;
         }
 
         .mainmenu-nav .mainmenu li.has-droupdown .submenu li a:hover {
@@ -185,6 +192,9 @@ body {
         .footer-style-default .social-default li a ,
         .copyright-style-one .social-default.color-lessdark li a ,
         .rn-newsletter-default .rn-newsletter .form-group input {
+            background: #fff;
+        }
+        .rn-newsletter-default .rn-newsletter .form-group select {
             background: #fff;
         }
 
@@ -252,6 +262,7 @@ body.light .header-top-bar {
 body.light .single-timeline .single-content,
 body.light .rn-card,
 body.light .clltoaction-style-default.style-5 .content-wrapper,
+body.light .clltoaction-style-default.style-5 .content-wrapper-2,
 body.light .header-default,
 body.light .mainmenu-nav .mainmenu li.has-droupdown .submenu,
 body.light .service.gallery-style,
@@ -281,6 +292,7 @@ body.light .frame-image ,
 body.light .rn-back-top,
 body.light .popup-mobile-menu .inner,
 body.light .rn-call-to-action.style-8,
+body.light .rn-call-to-action-2.style-8,
 body.light .bg-overlay-solid::before {
     background: #f5f8fa;
 }
