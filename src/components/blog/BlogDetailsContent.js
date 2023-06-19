@@ -9,7 +9,7 @@ import { getFormatedData } from "../../utils/helper";
 
 const BlogDetailsContent = ({ data }) => {
   const descriptionText = data.description
-  
+
   return (
     <>
       <div className="post-page-banner rn-section-gapTop">
@@ -56,7 +56,7 @@ const BlogDetailsContent = ({ data }) => {
                 <div className="blog-details-content-description">
                  <p dangerouslySetInnerHTML={{__html: descriptionText}}></p>
                 </div>
-                  <div style={{textAlign:"end"}}>~ {data.author}</div>
+                  <div style={{textAlign:"end"}}>{data?.author !== "undefined" ? `~ ${data.author}` : ""}</div>
                 {/* <div className="category-meta">
                                     <span className="text">Tags:</span>
                                     <SidebarTag />
@@ -65,7 +65,7 @@ const BlogDetailsContent = ({ data }) => {
                 {/* <div className="rn-comment-form pt--60">
                                     <div className="comment-respond">
                                         <h4 className="title mb--40">Leave a Reply</h4>
-                                        <Comment 
+                                        <Comment
                                             url=""
                                             id={data.id}
                                             title={data.title}

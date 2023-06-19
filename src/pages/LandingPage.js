@@ -374,7 +374,7 @@ const LandingPage = () => {
                                 </div>
                             </div>
                             <div className="col-lg-12 col-xl-6 col-12">
-                                <div className="split-inner pt-0 pb--0">
+                                <div className="split-inner pt-0 pb--0 paddingX">
                                     <div className="d-flex justify-content-center">
                                         <img src={printing} alt="split Images"/>
                                     </div>
@@ -384,12 +384,12 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div className="rn-splite-style p-5">
-                    <div className="split-inner-2">
+                <div className="rn-splite-style p-5 pt-0">
+                    <div className="split-inner-2 paddingX">
                         <div className="row no-gutters radius-10 align-items-center">
                             <div className="col-lg-12 col-xl-6 col-12">
                                 <div className="d-flex justify-content-center">
-                                    <h3 className="mb-2">SAMPLE WORKS</h3>
+                                    <h3 className="mb-2 mt-3">SAMPLE WORKS</h3>
                                 </div>
                                 <div className="d-flex justify-content-center">
                                     <img src={sample} alt={"sample"} className="heightImage widthImage"/>
@@ -397,7 +397,7 @@ const LandingPage = () => {
                             </div>
                             <div className="col-lg-12 col-xl-6 col-12">
                                 <div className="d-flex justify-content-center">
-                                    <h3 className="mb-2">PRODUCT CATEGORY</h3>
+                                    <h3 className="mb-2 mt-3">PRODUCT CATEGORY</h3>
                                 </div>
                                 <div className="d-flex justify-content-center">
                                     <img src={product} alt={"sample"} className="heightImage widthImage"/>

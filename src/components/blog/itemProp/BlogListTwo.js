@@ -42,7 +42,7 @@ const BlogListTwo = ({ data, StyleVar }) => {
           </h4>
           <div className="blog-details-content-description">
           <div className="rn-meta-list">
-            <span>{formattedDate}</span><span style={{marginLeft:10}}>- {data.author}</span>
+            <span>{formattedDate}</span><span style={{marginLeft:10}}>- {data?.author !== "undefined" ? data?.author : ""}</span>
           </div>
           <div className="description-container">
           <div className="descriptiion" dangerouslySetInnerHTML={{__html:data.description}}></div>
