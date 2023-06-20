@@ -8,7 +8,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <MessengerCustomerChat pageId="416585898785435" appId="<APP_ID>" />
+    <MessengerCustomerChat pageId="106625854202371" appId="191538291262473" />
   </React.StrictMode>,
   document.getElementById("root")
 );
