@@ -27,8 +27,8 @@ const BrandOne = ({brandStyle}) => {
     return (
         <ul className={`brand-list ${brandStyle}`}>
             {BrandList.map((data, index) => (
-                <li key={index}>
-                    <a href="#"><img src={`${data.image}`} alt="Brand Image" /></a>
+                <li key={index} >
+                    <a href="#"><img src={`${data.image}`} style={{backgroundColor: "#fff"}} alt="Brand Image" /></a>
                 </li>
             ))}
         </ul>
