@@ -13,7 +13,7 @@
     "disqus-react": "^1.1.1",
     "emailjs-com": "^3.2.0",
     "google-map-react": "^2.1.10",
-    "google-maps-react": "^2.0.6",
+    "postcss-custom-properties": "^13.2.1",
     "react": "^17.0.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-bootstrap": "^1.6.4",
@@ -37,6 +37,9 @@
     "sass": "^1.49.10",
     "web-vitals": "^1.1.2"
   },
+  "resolutions": {
+    "postcss-custom-properties": "^13.2.1"
+  },
   "scripts": {
     "start": "set PORT=3005 && react-scripts start",
     "build": "react-scripts build",
@@ -47,6 +50,14 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "cssnano": {
+    "preset": [
+      "default",
+      {
+        "calc": false
+      }
     ]
   },
   "browserslist": {
