@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
+// import GoogleMapReact from 'google-map-react';
 import {withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps";
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+// const AnyReactComponent = ({ text }) => <div>{text}</div>;
 class GoogleMapStyle extends Component {
   static defaultProps = {
     center: {

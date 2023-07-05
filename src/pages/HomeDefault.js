@@ -22,7 +22,8 @@ const PopupData = [
     id: "01",
     image: "./images/bg/bg-image-4.jpg",
     popupLink: [
-      "https://www.youtube.com/embed/ctsT5Y-InqE?autoplay=1&mute=1&enablejsapi=1",
+      // "https://www.youtube.com/embed/ctsT5Y-InqE?autoplay=1&mute=1&enablejsapi=1",
+        "https://www.youtube.com/embed/crsgqWoPQkA?autoplay=1&mute=1&enablejsapi=1",
     ],
   },
 ];
@@ -53,7 +54,7 @@ const HomeDefault = () => {
   };
 
 
-  
+
   const getCategoryData = (id) => {
     setGalleryDataLoading(true)
     if (!id) return;
@@ -260,7 +261,7 @@ const HomeDefault = () => {
                   <BlogList StyleVar="box-card-style-default" data={item} />
                 </div>
               ))}</>}
-              
+
             </div>
           </div>
         </div>
