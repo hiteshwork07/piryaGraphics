@@ -35,8 +35,8 @@ function VideoTwo({galleryItem , imagename}) {
                 </div>
             </div>
             <div className="video-lightbox-wrapper">
-                <FsLightbox 
-                toggler={ toggler } 
+                <FsLightbox
+                toggler={ toggler }
                 sources={popupLink} />
             </div>
         </>
