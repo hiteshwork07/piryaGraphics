@@ -9,7 +9,11 @@ const PopupData = [
         image: "./images/bg/bg-image-4.jpg",
         popupLink: [
             // "https://www.youtube.com/embed/ctsT5Y-InqE?autoplay=1&mute=1&enablejsapi=1",
-            "https://www.youtube.com/embed/crsgqWoPQkA?autoplay=1",
+            // "https://www.youtube.com/embed/crsgqWoPQkA?autoplay=1",
+            <iframe width="1920px" height="1080px" src="https://www.youtube.com/embed/crsgqWoPQkA?autoplay=1"
+                    title="YouTube video player" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen/>
         ],
     }
 ]
