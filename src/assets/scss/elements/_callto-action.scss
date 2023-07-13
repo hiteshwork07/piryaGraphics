@@ -1,5 +1,5 @@
 /*--------------------------------
-    Call To Action Style  
+    Call To Action Style
 --------------------------------*/
 .clltoaction-style-default {
     padding: 250px 0;
@@ -150,7 +150,7 @@
         .content-wrapper-2 {
             background-color: var(--color-blackest);
             border-radius: var(--radius);
-            padding: 0 50px;
+            padding: 0 200px;
             @media #{$md-layout} {
                 padding: 0 20px;
             }
@@ -335,6 +335,6 @@
         right: -250px;
         bottom: auto;
         background-image: linear-gradient(45deg, var(--color-secondary), var(--color-tertiary));
-        
+
     }
 }

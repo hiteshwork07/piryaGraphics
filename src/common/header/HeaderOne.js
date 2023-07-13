@@ -7,7 +7,7 @@ import Darkmode from "./Darkmode";
 import useStickyHeader from "./useStickyHeader";
 
 
-const HeaderOne = ({btnStyle, HeaderSTyle, setPortFolioData = () =>{}, darkMode }) => {
+const HeaderOne = ({btnStyle, HeaderSTyle, setPortFolioData = () =>{}, darkMode, logo }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
     const onCanvasHandler = () => {
         setOffcanvasShow(prev => !prev);
@@ -28,6 +28,7 @@ const HeaderOne = ({btnStyle, HeaderSTyle, setPortFolioData = () =>{}, darkMode 
                     <div className="row align-items-center row--0">
                         <div className="col-lg-3 col-md-6 col-9 display-center">
                             <Logo
+                                logo={logo}
                                 image={`${process.env.PUBLIC_URL}/images/logo/logo.png`}
                                 image2={`${process.env.PUBLIC_URL}/images/logo/logo-dark.png`}
                             />

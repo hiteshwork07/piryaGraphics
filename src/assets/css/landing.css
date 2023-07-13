@@ -1,5 +1,13 @@
+.line-height-1 {
+    line-height: 1 !important;
+}
+
 .line-height-2 {
     line-height: 2 !important;
+}
+
+.line-height-normal {
+    line-height: normal !important;
 }
 
 .w-35 {
@@ -22,8 +30,28 @@
     font-size: 24px !important;
 }
 
+.fs-28 {
+    font-size: 28px !important;
+}
+
 .fs-32 {
     font-size: 32px !important;
+}
+
+.fs-42 {
+    font-size: 42px !important;
+}
+
+.fs-44 {
+    font-size: 44px !important;
+}
+
+.fs-109 {
+    font-size: 109px !important;
+}
+
+.mb-2 {
+    margin-bottom: 2% !important;
 }
 
 .mb-7 {
@@ -128,4 +156,12 @@ input::-webkit-inner-spin-button {
 
 .btn-close {
     margin-right: 10px !important;
+}
+
+.h-60 {
+    height: 60% !important;
+}
+
+.border-radius {
+    border-radius: 45px !important;
 }
