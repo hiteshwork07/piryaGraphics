@@ -28,6 +28,7 @@ import image4 from "../assets/images/landingPage/Image 4.png";
 import image5 from "../assets/images/landingPage/Image 5.png";
 import image6 from "../assets/images/landingPage/Image 6.png";
 import LogoImage from "../assets/images/logo/priyLogo.png";
+import SectionTitle from "../elements/sectionTitle/SectionTitle";
 
 const LandingPage = () => {
 
@@ -215,7 +216,7 @@ const LandingPage = () => {
                                             animateOnce={true}
                                         >
                                             <div
-                                                className="description mb-2 d-flex justify-content-center fs-17 color-black">
+                                                className="description mb-2 d-flex justify-content-center fs-17 color-black line-height-24">
                                                 Experience the brilliance of offset printing, where quality and
                                                 precision meet your vision.
                                             </div>
@@ -241,18 +242,17 @@ const LandingPage = () => {
                                             animateOut="fadeInOut"
                                             animateOnce={true}
                                         >
-                                            <div className="d-flex flex-row gap-5 color-black">
+                                            <div className="d-flex flex-row gap-3 color-black align-items-center">
                                                 <div>
                                                     <img className="" src={Line} alt="Corporate Logo"
-                                                         style={{height: "95px"}}/>
+                                                         style={{height: "60px"}}/>
                                                 </div>
-                                                <div className="d-flex flex-column justify-content-center">
-                                                    <div className="fs-24 fw-light">Call us Now</div>
-                                                    <div
-                                                        className="d-flex flex-row justify-content-center align-items-center">
+                                                <div className="d-flex flex-column">
+                                                    <h4 className="fs-24 fw-light mb-0">Call us Now</h4>
+                                                    <div className="d-flex flex-row align-items-center">
                                                         <img className="" src={Call} alt="Corporate Logo"
                                                              style={{height: "30px", width: "30px"}}/>
-                                                        <div className="fs-32 fw-bold">+ 91 9601291632</div>
+                                                        <h2 className="fs-32 fw-bold ml-10 mb-0">+ 91 96012 91632</h2>
                                                     </div>
                                                 </div>
                                             </div>
@@ -261,7 +261,7 @@ const LandingPage = () => {
                                 </div>
                                 <div className="col-lg-12 col-xl-6 col-12">
                                     <div className="">
-                                        <div className="rn-address mt-0 box-shadow">
+                                        <div className="rn-address mt-0 box-shadow bg-color-white">
                                             <div
                                                 className="fs-28 fw-bold d-flex align-items-center justify-content-center color-black"
                                                 style={{padding: "55px 0 55px 0"}}>
@@ -327,34 +327,34 @@ const LandingPage = () => {
                 </div>
 
                 <div className="rwt-elements-area">
-                    <div className="d-flex flex-row">
+                    <div className="flex">
                         <div className="col-lg-12 col-xl-6 col-12 d-flex align-items-center">
                             <div className="w-100 h-60 d-flex flex-row justify-content-around align-items-center"
                                  style={{background: 'linear-gradient(151deg, #1CC2BE 1.66%, #0E8C57 100%)'}}>
                                 <div>
                                     <ui>
-                                        <li className="color-white fs-32 fw-bold">Brochures</li>
-                                        <li className="color-white fs-32 fw-bold">Pamphlet</li>
-                                        <li className="color-white fs-32 fw-bold">Flyers</li>
-                                        <li className="color-white fs-32 fw-bold">Product Sticker</li>
-                                        <li className="color-white fs-32 fw-bold">Envelopes</li>
-                                        <li className="color-white fs-32 fw-bold">letterhead</li>
+                                        <li className="color-white fs fw-bold">Brochures</li>
+                                        <li className="color-white fs fw-bold">Pamphlet</li>
+                                        <li className="color-white fs fw-bold">Flyers</li>
+                                        <li className="color-white fs fw-bold">Product Sticker</li>
+                                        <li className="color-white fs fw-bold">Envelopes</li>
+                                        <li className="color-white fs fw-bold">Letterhead</li>
                                     </ui>
                                 </div>
                                 <div>
                                     <ui>
-                                        <li className="color-white fs-32 fw-bold">hospital Files</li>
-                                        <li className="color-white fs-32 fw-bold"> Box Printing</li>
-                                        <li className="color-white fs-32 fw-bold">forms</li>
-                                        <li className="color-white fs-32 fw-bold">Calendar</li>
-                                        <li className="color-white fs-32 fw-bold">Forms</li>
-                                        <li className="color-white fs-32 fw-bold">Visiting card</li>
+                                        <li className="color-white fs fw-bold">Hospital Files</li>
+                                        <li className="color-white fs fw-bold">Box Printing</li>
+                                        <li className="color-white fs fw-bold">Forms</li>
+                                        <li className="color-white fs fw-bold">Calendar</li>
+                                        <li className="color-white fs fw-bold">Forms</li>
+                                        <li className="color-white fs fw-bold">Visiting card</li>
                                     </ui>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-12 col-xl-6 col-12 d-flex justify-content-end">
-                            <img className="" src={Man} alt="Corporate Logo" style={{height: "712px", width: "702px"}}/>
+                            <img className="image-size" src={Man} alt="Corporate Logo" />
                         </div>
                     </div>
                 </div>
@@ -362,7 +362,7 @@ const LandingPage = () => {
                 <div className="rn-callto-action rn-call-to-action style-8 content-wrapper padding-0 border-radius">
                     <div className="rn-splite-style padding-title">
                         <div className="split-wrapper">
-                            <div className="content-wrapper content d-flex justify-content-center">
+                            <div className="content-wrapper content d-flex justify-content-center text-center">
                                 <div>
                                     <h6 className="subtitle">Your one-stop solution for exceptional design, service,
                                         quality, and value in all
@@ -370,7 +370,7 @@ const LandingPage = () => {
                                         graphics, printing and advertising needs.</h6>
                                 </div>
                             </div>
-                            <div className="d-flex flex-row justify-content-between pb--65">
+                            <div className="flex align-items-center flex-row justify-content-between pb--65">
                                 <img className="" src={Product1} alt="Corporate Logo" height={180} width={180}/>
                                 <img className="" src={Product2} alt="Corporate Logo" height={180} width={180}/>
                                 <img className="" src={Product3} alt="Corporate Logo" height={180} width={180}/>
@@ -399,13 +399,13 @@ const LandingPage = () => {
                         <div className="">
                             <div className="col-lg-12">
                                 <div className="inner">
-                                    <div
-                                        className="content text-center d-flex flex-row justify-content-evenly align-items-center">
+                                    <div className="content text-center flex justify-content-evenly align-items-center">
                                         <h3 className="mb-0">Best offer Printing Service</h3>
                                         <h6 className="subtitle">Top Quality, Great Price</h6>
-                                        <div className="call-to-btn text-center">
-                                            <a className="btn-default-2 btn-icon" onClick={() => onContact()}>Contact
-                                                Us <i className="icon"><FiArrowRight/></i></a>
+                                        <div className="view-more-button p-10 d-flex justify-content-center" onClick={() => onContact()}>
+                                            <a className="btn-default-2 d-flex align-items-center">
+                                                <h4 className="mb-0 color-white">Contact Us</h4>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -452,7 +452,12 @@ const LandingPage = () => {
                     <div className="">
                         <div className="row">
                             <div className="col-lg-12">
-                                <h3 className="mb-0 d-flex justify-content-center mt-4">OUR CUSTOMER FEEDBACK</h3>
+                                <SectionTitle
+                                    textAlign="text-center"
+                                    radiusRounded=""
+                                    subtitle="Client Feedback"
+                                    title="Testimonial"
+                                />
                             </div>
                         </div>
                         <TestimonialOne
@@ -493,7 +498,7 @@ const LandingPage = () => {
                                 </div>
                             </div>
                             <div className="col-lg-12 col-xl-6 col-12 split-inner-form">
-                                <div className="rn-address box-shadow mt-0">
+                                <div className="rn-address box-shadow mt-0 bg-color-white">
                                     <div
                                         className="fs-28 fw-bold d-flex align-items-center justify-content-center color-black"
                                         style={{padding: "55px 0 55px 0"}}>

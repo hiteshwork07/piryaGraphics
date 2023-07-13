@@ -6,6 +6,10 @@
     line-height: 2 !important;
 }
 
+.line-height-24 {
+    line-height: 24px !important;
+}
+
 .line-height-normal {
     line-height: normal !important;
 }
@@ -44,10 +48,6 @@
 
 .fs-44 {
     font-size: 44px !important;
-}
-
-.fs-109 {
-    font-size: 109px !important;
 }
 
 .mb-2 {
@@ -95,7 +95,8 @@
 }
 
 .box-shadow {
-    box-shadow: 0 0 20px rgb(14 113 127) !important;
+    /*box-shadow: 0 0 20px rgb(14 113 127) !important;*/
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.20) !important;
 }
 
 .modal-title {
@@ -164,4 +165,13 @@ input::-webkit-inner-spin-button {
 
 .border-radius {
     border-radius: 45px !important;
+}
+
+.ml-10 {
+    margin-left: 10px !important;
+}
+
+.image-size {
+    height: auto;
+    width: auto
 }
