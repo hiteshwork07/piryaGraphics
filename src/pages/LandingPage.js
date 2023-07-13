@@ -9,8 +9,8 @@ import TestimonialOne from "../elements/testimonial/TestimonialOne";
 import "../assets/css/landing.css"
 import Model from "../elements/model/Model";
 import {createInquiry} from "../action/inquiry";
-import Circle from "../assets/images/landingPage/circle.png"
-import Book from "../assets/images/landingPage/book.png"
+import Circle from "../assets/images/landingPage/circle.svg"
+import Book from "../assets/images/landingPage/book.svg"
 import Line from "../assets/images/landingPage/Line.png";
 import Call from "../assets/images/landingPage/Call.png";
 import Man from "../assets/images/landingPage/Man.png";
@@ -221,7 +221,7 @@ const LandingPage = () => {
                                             </div>
                                         </ScrollAnimation>
                                         <ScrollAnimation
-                                            className='mb-2 d-flex justify-content-center'
+                                            className='d-flex justify-content-between'
                                             animateIn="fadeInUp"
                                             animateOut="fadeInOut"
                                             animateOnce={true}
@@ -236,7 +236,7 @@ const LandingPage = () => {
                                             </div>
                                         </ScrollAnimation>
                                         <ScrollAnimation
-                                            className=""
+                                            className="mb-4"
                                             animateIn="fadeInUp"
                                             animateOut="fadeInOut"
                                             animateOnce={true}
@@ -471,7 +471,7 @@ const LandingPage = () => {
                                         <img className="logo-dark" src={LogoImage} alt="Corporate Logo" height={100} width={100}/>
                                         <h6 className="mt-3">All Type of Design & Print Silution</h6>
                                         <ScrollAnimation
-                                            style={{marginTop: "15%"}}
+                                            style={{marginTop: "10%"}}
                                             animateIn="fadeInUp"
                                             animateOut="fadeInOut"
                                             animateOnce={true}>
